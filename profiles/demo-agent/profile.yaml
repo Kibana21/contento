@@ -1,0 +1,38 @@
+# Demo profile for development. Not a real representative.
+# photos/formal.jpg is a SYNTHETIC image generated for development only.
+# It depicts no real person and must be replaced with the representative's own photo.
+id: demo-agent
+name: Jane Tan
+title: Financial Services Consultant
+agency: Horizon Wealth Advisory
+
+contact:
+  mobile: "+65 9123 4567"
+  email: "jane.tan@example.com"
+  url: "https://example.com/jane-tan"
+
+qr_target: "https://example.com/jane-tan"
+registration_url: "https://example.com/jane-tan/events"
+
+languages:
+  - en
+  - zh-Hans
+
+preferred_photo: photos/formal.jpg
+
+preferences:
+  style:
+    - premium
+    - warm
+    - minimal
+  avoid:
+    - very dark backgrounds
+    - crowded layouts
+
+credentials:
+  - text: "MDRT Member 2025"
+    approved: true
+    expires: 2026-12-31
+
+admin_approved: true
+version: "1"

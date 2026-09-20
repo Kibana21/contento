@@ -1,0 +1,22 @@
+{
+  "$schema_version": "0.1",
+  "source": "https://design.aia.com/spacing ; https://design.aia.com/grid-and-layout",
+  "captured": "2026-09-19",
+  "base_unit": { "value": 4, "note": "4px soft grid; all spacing divisible by 4, aligning to 8", "provenance": "published" },
+  "scale": {
+    "space-1": 4, "space-2": 8, "space-3": 12, "space-4": 16, "space-6": 24, "space-8": 32,
+    "space-10": 40, "space-12": 48, "space-16": 64, "space-20": 80, "space-24": 96,
+    "provenance": "proposed (multiples of 4)"
+  },
+  "grid": {
+    "columns": 12,
+    "provenance": "published (1-12 equal columns per row)"
+  },
+  "poster": {
+    "reference_canvas_width": 1080,
+    "outer_margin": 64,
+    "gutter": 24,
+    "snap": 4,
+    "provenance": "proposed"
+  }
+}

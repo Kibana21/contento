@@ -1,0 +1,91 @@
+{
+  "$schema_version": "0.2",
+  "sources": {
+    "brand_standards": "AIA Brand Standards v2.0 (brands.pdf, Jul 2022), pp. 51-56",
+    "digital_ui": "https://design.aia.com/colour (AIA Qi, captured 2026-09-19)"
+  },
+  "precedence": "Marketing collateral (posters, social, print) follows brand_standards. The digital_ui palette applies only to app/web UI built with AIA Qi.",
+
+  "core": {
+    "red":      { "value": "#D31145", "name": "AIA Red",      "pantone": "200C", "cmyk": [0, 100, 63, 12], "rgb": [211, 17, 69],
+                  "tints": { "80": "#DB406A", "60": "#E4708F", "40": "#ED9FB4", "20": "#F6CFD9" } },
+    "charcoal": { "value": "#333D47", "name": "AIA Charcoal", "pantone": "432C", "cmyk": [78, 62, 49, 51], "rgb": [51, 61, 71],
+                  "tints": { "80": "#5B636B", "60": "#848A90", "40": "#ADB1B5", "20": "#D6D8DA" } },
+    "white":    { "value": "#FFFFFF", "name": "White", "cmyk": [0, 0, 0, 0] },
+    "provenance": "published (brand_standards p51)"
+  },
+
+  "secondary": {
+    "usage": "Never dominant; never without AIA Red; max 4 per page/section (unless navigation). For energy/calm, highlighting info, differentiation, navigation, infographics, illustration.",
+    "salmon":   { "value": "#FF7A85", "pantone": "701C",         "cmyk": [0, 65, 34, 0],  "tints": { "80": "#FF969D", "60": "#FFB0B6", "40": "#FECACE", "20": "#FEE4E7" } },
+    "cerise":   { "value": "#BA0361", "pantone": "215C",         "cmyk": [20, 100, 27, 9], "tints": { "80": "#C83681", "60": "#D5689F", "40": "#E29AC0", "20": "#F2CDDF" } },
+    "orange":   { "value": "#FF754D", "pantone": "164C",         "cmyk": [0, 65, 68, 0],  "tints": { "80": "#FF9170", "60": "#FEAC94", "40": "#FFC8B9", "20": "#FFE2DA" } },
+    "yellow":   { "value": "#F7C926", "pantone": "123C",         "cmyk": [4, 21, 89, 0],  "tints": { "80": "#F9D452", "60": "#F9E07C", "40": "#FCEAA8", "20": "#FDF4D3" } },
+    "purple":   { "value": "#4C4794", "pantone": "268C",         "cmyk": [83, 78, 3, 0],  "tints": { "80": "#706CA9", "60": "#9491BE", "40": "#B6B5D4", "20": "#DBDAEA" } },
+    "lavender": { "value": "#A199BA", "pantone": "522C",         "cmyk": [42, 40, 13, 1], "tints": { "80": "#B3ADC7", "60": "#C5C2D5", "40": "#D8D6E3", "20": "#ECEBF1" } },
+    "blue":     { "value": "#1F78AD", "pantone": "7683C",        "cmyk": [84, 44, 13, 1], "tints": { "80": "#4B92BE", "60": "#78AFCE", "40": "#A5C9DF", "20": "#D2E4F0" } },
+    "green":    { "value": "#88B943", "pantone": "7737",         "cmyk": [55, 4, 90, 0],  "tints": { "80": "#A9C574", "60": "#BED496", "40": "#D4E2B8", "20": "#E9F0DB" } },
+    "silver":   { "value": "#D3CAC3", "pantone": "Warm Grey 1C", "cmyk": [20, 19, 22, 1], "tints": { "80": "#DCD5CF", "60": "#E4DFDB", "40": "#EEEAE7", "20": "#F5F4F2" } },
+    "gold":     { "value": "#CAAF78", "pantone": "466",          "cmyk": [21, 27, 57, 6], "tints": { "80": "#D6BF93", "60": "#DFCFAE", "40": "#EADFC9", "20": "#F3EFE4" } },
+    "provenance": "published (brand_standards p52)"
+  },
+
+  "approved_backgrounds": {
+    "note": "Use sparingly; AIA Red must remain predominant. No gradients. (Cerise, yellow, green are NOT approved backgrounds.)",
+    "red":      [100],
+    "white":    [100],
+    "blue":     [100, 80, 60, 40, 20],
+    "orange":   [100, 80, 60, 40, 20],
+    "purple":   [100, 80, 60, 40, 20],
+    "lavender": [100, 80, 60, 20],
+    "salmon":   [100, 80, 60, 20],
+    "silver":   [100, 60, 40, 20],
+    "gold":     [100, 80, 40, 20],
+    "provenance": "published (brand_standards p53, read from swatch chart)"
+  },
+
+  "text_colour_rules": {
+    "headline":   { "on_light": "red", "on_red": "white" },
+    "subheading": { "on_light": "charcoal", "on_red": "white", "note": "Brand p76 shows charcoal subheads on red, but that is 2.07:1 contrast and fails p53's own legibility rule. We use white." },
+    "body":       { "on_light": ["red", "charcoal"], "on_red": "white" },
+    "provenance": "published (brand_standards p76), subheading-on-red overridden for contrast"
+  },
+
+  "contrast_reference": {
+    "white_on_red": 5.34, "red_on_white": 5.34, "charcoal_on_red": 2.07, "red_on_red20": 3.77,
+    "charcoal_on_red20": 7.82, "white_on_red80": 4.24, "white_on_purple": 7.97, "white_on_blue": 4.83,
+    "white_on_orange": 2.66, "charcoal_on_yellow": 7.02
+  },
+
+  "rules": {
+    "red_must_be_dominant":        { "severity": "error", "check": "AIA Red (incl. tints) is the largest chromatic colour area; or a design on white/light-charcoal base uses red as highlight and no secondary exceeds red's area", "provenance": "published (p51, p54, p56)" },
+    "secondary_requires_red":      { "severity": "error", "provenance": "published (p56)" },
+    "max_secondary_colours":       { "value": 4, "severity": "error", "provenance": "published (p56)" },
+    "no_gradient_backgrounds":     { "severity": "error", "provenance": "published (p53)" },
+    "background_from_approved_set": { "severity": "error", "provenance": "published (p53, p56)" },
+    "min_text_contrast":           { "value": 4.5, "severity": "error", "provenance": "proposed (WCAG AA); brand p53 requires 'plenty of contrast'" },
+    "min_large_text_contrast":     { "value": 3.0, "severity": "error", "provenance": "proposed (WCAG AA large)" },
+    "logo_colours":                { "allowed": ["red", "white"], "severity": "error", "provenance": "published (p39)" }
+  },
+
+  "digital_ui": {
+    "note": "AIA Qi digital palette. Only for app/web UI. Its 'red <= 20% of layout' rule is a UI rule and does NOT apply to marketing collateral.",
+    "red":      { "50": "#FFEDF1", "100": "#F39CB3", "200": "#EC6B8E", "300": "#E84671", "400": "#E32155", "500": "#E00842", "600": "#B30635", "700": "#860528", "800": "#5A031A", "900": "#2D020D" },
+    "charcoal": { "50": "#F5F5F6", "100": "#EBECED", "200": "#D6D8DA", "300": "#ADB1B5", "400": "#858B91", "500": "#666E75", "600": "#333D47", "700": "#293139", "800": "#1F252B", "900": "#14181C" },
+    "salmon":    { "100": "#FFE4E7", "200": "#FFCFD3", "300": "#FFBAC0", "400": "#FF7A85", "500": "#E26276", "600": "#C64A67", "700": "#982D4F" },
+    "purple":    { "100": "#DEDDF7", "200": "#BCBBEF", "300": "#9B9AE6", "400": "#7978DE", "500": "#5856D6", "600": "#4645AB", "700": "#353480" },
+    "warm-grey": { "100": "#E9E5E1", "200": "#DED7D2", "300": "#D3CAC3", "400": "#97908B", "500": "#79736F", "600": "#5A5754", "700": "#3C3A38" },
+    "red_max_area_ratio": 0.20,
+    "provenance": "sampled from design.aia.com swatch images; partly observed-css"
+  },
+
+  "high_net_worth": {
+    "note": "AIA High Net Worth business only. Replaces AIA Red with AIA Olive. Do not use for general agent collateral.",
+    "olive":      { "value": "#A5915C", "cmyk": [32, 34, 66, 16], "tints": { "80": "#B5A57C", "60": "#C7BB9D", "40": "#DAD2BD", "20": "#ECE8DE" } },
+    "dark_green": { "value": "#68655A", "cmyk": [53, 44, 53, 36], "tints": { "80": "#86827A", "60": "#A4A19B", "40": "#C2C0BC", "20": "#E0DFDD" } },
+    "warm_grey":  { "value": "#D3CAC3", "cmyk": [20, 19, 22, 1],  "tints": { "80": "#DBD4CF", "60": "#E4DFDB", "40": "#EDE9E7", "20": "#F6F4F3" } },
+    "charcoal": "#333D47", "white": "#FFFFFF", "print_finish": "gold foil",
+    "pantone_refs": ["7754U", "7771U"],
+    "provenance": "published (brand_standards p128); Pantone-to-colour assignment to confirm"
+  }
+}

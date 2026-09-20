@@ -1,0 +1,122 @@
+# Which fields each campaign family needs, and where it starts on the risk scale.
+# Risk may be raised by the policy engine or the Brief Agent, never lowered (ADR-005/007).
+version: "0.1"
+status: "draft — needs AIA SG Marketing and Compliance sign-off"
+
+defaults:
+  mandatory: [agent.name, agent.title]
+  blocking: [agent.name]          # without these, generation stops
+  export_presets: [instagram_portrait, instagram_square, whatsapp_portrait]
+
+families:
+  festive:
+    risk: green
+    mandatory: [festival]
+    blocking: [festival]
+    tone: [warm, celebratory, personal]
+    disclaimers: []
+    notes: "Greeting only. Any product mention moves this to product_promotion."
+
+  relationship:
+    risk: green
+    mandatory: []
+    tone: [warm, personal]
+    disclaimers: []
+
+  appreciation:
+    risk: green
+    mandatory: []
+    tone: [warm, grateful]
+    disclaimers: []
+
+  personal_branding:
+    risk: green
+    mandatory: [agent.title]
+    tone: [confident, human]
+    disclaimers: []
+    notes: "Green only while no financial claim or product benefit appears."
+
+  achievement:
+    risk: amber
+    mandatory: [agent.title]
+    tone: [confident, humble]
+    disclaimers: [mas_not_reviewed]
+    notes: "Awards and milestones must be factual and attributable."
+
+  event:
+    risk: amber
+    mandatory: [event.title, event.date, event.venue]
+    blocking: [event.date, event.venue]
+    tone: [clear, inviting]
+    disclaimers: [mas_not_reviewed]
+    export_presets: [instagram_portrait, instagram_story, whatsapp_portrait, a4_print]
+
+  seminar:
+    risk: amber
+    mandatory: [event.title, event.date, event.time_start, event.venue, cta.text]
+    blocking: [event.date, event.venue]
+    tone: [confident, approachable, informative]
+    disclaimers: [mas_not_reviewed]
+    export_presets: [instagram_portrait, instagram_story, whatsapp_portrait, a4_print]
+
+  recruitment:
+    risk: amber
+    mandatory: [event.date, event.venue]
+    blocking: [event.date]
+    tone: [motivating, honest]
+    disclaimers: [mas_not_reviewed]
+    notes: "No earnings claims of any kind."
+
+  educational:
+    risk: amber
+    mandatory: []
+    tone: [clear, helpful, neutral]
+    disclaimers: [mas_not_reviewed, info_general]
+    notes: "General financial education only; no product recommendation."
+
+  product_promotion:
+    risk: red
+    mandatory: [product.name]
+    blocking: [product.name]
+    tone: [clear, factual]
+    disclaimers: [mas_not_reviewed, underwritten_by, not_contract, read_contract, ppf_scheme, sdic_short]
+    requires_human_approval: true
+    notes: "Phase 2. Every claim needs an approved source (BRD §25.2, FR-032)."
+
+# Words that force a higher risk class wherever they appear in the request or copy.
+risk_triggers:
+  red:
+    - guaranteed return
+    - guaranteed returns
+    - guaranteed payout
+    - capital guaranteed
+    - "% p.a."
+    - per annum
+    - premium from
+    - coverage up to
+    - sum assured
+    - payout of
+    - best plan
+    - cheapest
+    - risk-free
+    - tax-free
+  amber:
+    - retirement planning
+    - financial planning
+    - wealth
+    - protection gap
+    - insurance needs
+    - cpf
+    - savings plan
+
+# Never allowed in agent-created material, at any risk level.
+prohibited_terms:
+  - guaranteed profit
+  - no risk
+  - risk free
+  - risk-free
+  - double your money
+  - best in market
+  - cheapest in singapore
+  - act now or lose
+  - limited time only

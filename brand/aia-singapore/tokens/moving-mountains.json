@@ -1,0 +1,33 @@
+{
+  "$schema_version": "0.1",
+  "source": "AIA Brand Standards v2.0 pp. 58-71",
+  "construction": { "grid_px": [560, 400], "min_mountains": 3, "max_mountains": 4, "corner_radius_px_at_grid": 8, "cover_full_grid_width": true, "trim_back_mountains": "minus_front" },
+  "order": "index 0 = first/front mountain",
+  "variants": {
+    "core_3":      [ { "colour": "red", "tint": 100, "opacity": 1.0 }, { "colour": "red", "tint": 60, "opacity": 0.9 }, { "colour": "red", "tint": 20, "opacity": 1.0 } ],
+    "core_4":      [ { "colour": "red", "tint": 100, "opacity": 1.0 }, { "colour": "red", "tint": 80, "opacity": 0.9 }, { "colour": "red", "tint": 60, "opacity": 0.9 }, { "colour": "red", "tint": 20, "opacity": 1.0 } ],
+    "inverted_3":  { "background": "red", "mountains": [ { "colour": "red", "tint": 60, "opacity": 1.0 }, { "colour": "red", "tint": 40, "opacity": 0.9 }, { "colour": "red", "tint": 20, "opacity": 1.0 } ] },
+    "inverted_4":  { "background": "red", "mountains": [ { "colour": "red", "tint": 60, "opacity": 1.0 }, { "colour": "red", "tint": 40, "opacity": 0.9 }, { "colour": "red", "tint": 20, "opacity": 0.9 }, { "colour": "white", "tint": 100, "opacity": 1.0 } ] },
+    "transparent_3": [ { "colour": "red", "tint": 100, "opacity": 1.0 }, { "colour": "red", "tint": 60, "blend": "multiply" }, { "colour": "red", "tint": 20, "blend": "multiply" } ],
+    "transparent_4": [ { "colour": "red", "tint": 100, "opacity": 1.0 }, { "colour": "red", "tint": 80, "blend": "multiply" }, { "colour": "red", "tint": 60, "blend": "multiply" }, { "colour": "red", "tint": 20, "blend": "multiply" } ],
+    "container_3": [ { "fill": "image" }, { "colour": "red", "tint": 100, "opacity": 1.0 }, { "colour": "red", "tint": 20, "opacity": 1.0 } ],
+    "container_4": [ { "fill": "image" }, { "colour": "red", "tint": 100, "opacity": 1.0 }, { "colour": "red", "tint": 60, "opacity": 0.9 }, { "colour": "red", "tint": 20, "opacity": 1.0 } ],
+    "multicolour": { "rule": "secondary colours at 100% tint only; red must be first mountain or background; first/last opacity 1.0, middle 0.9" },
+    "two_colour":  { "rule": "first mountain red 100; others tints of ONE secondary colour; on red bg first = secondary 100%" },
+    "outline":     { "rule": "stroke red 100% or white only (or core tints); inverted outline white only; no secondaries" }
+  },
+  "photo_modes": ["container", "cutout", "full_bleed", "layers", "transparent"],
+  "constraints": {
+    "max_graphics_per_design": 1,
+    "rotation_allowed": false,
+    "flip_vertical_allowed": false,
+    "inverted_requires_red_background": true,
+    "container_with_cutout_allowed": false,
+    "transparent_requires_light_image": true,
+    "on_secondary_background_only": ["core_3", "core_4"],
+    "pointed_triangles_allowed": false,
+    "ai_generated_allowed": false
+  },
+  "reserved": { "vitality_3d": "AIA Vitality campaigns only", "hnw_olive": "AIA High Net Worth only", "mirror": "designer-only, AIA One Billion" },
+  "asset_status": "MISSING: library shapes + Illustrator grid on Group Brand SharePoint (p70-71). Proposed interim: hand-build 4-6 shape sets on the 560x400 grid from reference pages."
+}

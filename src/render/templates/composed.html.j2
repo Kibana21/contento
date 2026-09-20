@@ -1,0 +1,125 @@
+{% extends "base.html.j2" %}
+{% import "_macros.j2" as m with context %}
+{#
+  The grammar-driven layout. One template renders every composition the Creative Director
+  may choose; the vocabulary is bounded by contracts/creative.py, so no free-form design
+  can reach the page. Skeletons (layouts.py) supply the defaults each family starts from.
+#}
+{% set c = composition %}
+{% block layout_css %}
+.poster{ --gap: calc(var(--unit) * 6 * {{ c.gap_scale }});
+         --pad: calc(var(--margin) * {{ c.margin_scale }});
+         --footer-zone: calc(var(--pad) + var(--unit) * 34); }
+
+/* ---- 12 column stage ------------------------------------------------- */
+.stage{ position:absolute; inset:0; display:grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: auto minmax(0, 1fr) auto;
+        column-gap: var(--gutter); row-gap: var(--gap);
+        padding: var(--pad); z-index:3; }
+.band-top{ grid-column: 1 / -1; grid-row: 1; display:flex; justify-content:space-between;
+           align-items:flex-start; }
+.copy-block{ grid-row: 2; display:flex; flex-direction:column; gap: calc(var(--gap) * .55);
+             grid-column: {{ (13 - c.headline_span) if c.headline_anchor in ['top-right','middle-right'] or c.photo_placement.value == 'left' else 1 }}
+                          / span {{ c.headline_span }};
+             min-width: 0; z-index:3;
+             {% if c.headline_anchor in ['middle-left','middle-right','centre'] %}justify-content:center;{% endif %}
+             {% if c.headline_anchor == 'bottom-left' %}justify-content:flex-end;{% endif %}
+             {% if c.centred %}align-items:center; text-align:center;{% endif %} }
+.copy-block .subheadline, .copy-block .body-copy{ max-width: {{ (c.copy_span / c.headline_span * 100) | round }}%; }
+.band-bottom{ grid-column: 1 / -1; grid-row: 3; display:flex; justify-content:space-between;
+              align-items:flex-end; gap: var(--gutter); }
+.band-bottom .left{ display:flex; flex-direction:column; gap: calc(var(--unit)*2); }
+.band-bottom .right{ display:flex; align-items:flex-end; gap: calc(var(--unit)*4); }
+
+/* ---- type ------------------------------------------------------------- */
+.headline{ line-height: 1.02; letter-spacing: -0.018em;
+           overflow-wrap: normal; word-break: keep-all; hyphens: manual;
+           color: {{ 'var(--white)' if theme == 'bold' else 'var(--red)' }}; }
+.subheadline{ color: {{ 'rgba(255,255,255,.92)' if theme == 'bold' else 'var(--charcoal)' }}; }
+.body-copy{ color: {{ 'rgba(255,255,255,.86)' if theme == 'bold' else 'var(--charcoal)' }}; }
+.fact{ color: {{ 'var(--white)' if theme == 'bold' else 'var(--charcoal)' }}; }
+{% if not c.centred %}.headline{ text-wrap: balance; }{% endif %}
+
+/* ---- accent ----------------------------------------------------------- */
+{% if c.accent.value == 'rule' %}
+.headline::after{ content:""; display:block; width: calc(var(--unit)*20); height: calc(var(--unit)*1.5);
+                  margin-top: calc(var(--gap)*.5);
+                  background: {{ 'var(--white)' if theme == 'bold' else 'var(--red)' }}; }
+{% elif c.accent.value == 'bar' %}
+.copy-block{ border-left: calc(var(--unit)*1.5) solid {{ 'var(--white)' if theme == 'bold' else 'var(--red)' }};
+             padding-left: calc(var(--gap)*.6); }
+{% elif c.accent.value == 'block' %}
+.subheadline{ display:inline-block; align-self:flex-start;
+              background: {{ 'var(--white)' if theme == 'bold' else 'var(--red)' }};
+              color: {{ 'var(--red)' if theme == 'bold' else 'var(--white)' }};
+              padding: calc(var(--unit)*2) calc(var(--unit)*4); }
+{% endif %}
+
+/* ---- details ---------------------------------------------------------- */
+.details{ display:flex; flex-wrap:wrap; gap: calc(var(--gap)*.5) calc(var(--gap)*.9);
+          margin-top: calc(var(--gap)*.35); }
+.details .fact{ border-left: 2px solid {{ 'rgba(255,255,255,.55)' if theme == 'bold' else 'var(--red)' }};
+                padding-left: calc(var(--unit)*3); }
+
+/* ---- portrait ----------------------------------------------------------
+   The portrait is a grid cell, not a floating layer, so it can never sit on the
+   copy column. Only a deliberate full-bleed treatment leaves the grid, and it
+   still stops above the footer band. */
+{% if c.photo_placement.value == 'full-bleed-right' %}
+.portrait-layer{ position:absolute; right:0; bottom: var(--footer-zone); z-index:2;
+                 display:flex; align-items:flex-end; }
+{% else %}
+.portrait-layer{ grid-row: 2; z-index:2; display:flex; align-items:flex-end; min-width:0;
+  justify-content: {{ 'flex-start' if c.photo_placement.value == 'left' else 'center' if c.photo_placement.value == 'centre' else 'flex-end' }};
+  grid-column: {{ 1 if c.photo_placement.value == 'left' else (13 - c.photo_columns) }} / span {{ c.photo_columns }};
+  {% if c.photo_placement.value == 'inset' %} align-items:center; {% endif %} }
+.agent-photo{ max-width:100%; }
+{% endif %}
+.agent-photo{ object-fit: cover; object-position: top center;
+  {% if c.photo_shape.value == 'circle' %} border-radius:50%;
+  {% elif c.photo_shape.value == 'panel' %} border-radius: calc(var(--unit)*4);
+  {% elif c.photo_shape.value == 'arch' %} border-radius: 9999px 9999px calc(var(--unit)*4) calc(var(--unit)*4);
+  {% endif %} }
+{% if c.photo_shape.value in ['panel','arch','circle'] %}
+.agent-photo{ box-shadow: 0 24px 60px rgba(26,30,36,.18); }
+{% endif %}
+
+/* ---- Moving Mountains -------------------------------------------------- */
+.mountains-wrap{ position:absolute; z-index:1;
+  {% if c.mountains_placement.value == 'baseline' %} left:0; right:0; bottom:0;
+  {% elif c.mountains_placement.value == 'corner-right' %} right:0; bottom:0;
+  {% elif c.mountains_placement.value == 'corner-left' %} left:0; bottom:0;
+  {% elif c.mountains_placement.value == 'behind-photo' %} right: calc(var(--pad) * .2); bottom:0;
+  {% else %} left:0; right:0; top:52%;
+  {% endif %} }
+
+/* footer legibility over artwork */
+.band-bottom{ position:relative; }
+.band-bottom::before{ content:""; position:absolute; inset: calc(var(--gap)*-1) calc(var(--pad)*-1) calc(var(--pad)*-1);
+  background: linear-gradient(to top,
+    {{ 'var(--red)' if theme == 'bold' else 'var(--white)' }} 62%,
+    {{ 'rgba(211,17,69,0)' if theme == 'bold' else 'rgba(255,255,255,0)' }});
+  z-index:-1; }
+{% endblock %}
+
+{% block body %}
+<div class="mountains-layer">{{ m.slot('background-graphic') }}</div>
+{% if c.photo_placement.value == 'full-bleed-right' %}
+<div class="portrait-layer">{{ m.slot('portrait') }}</div>
+{% endif %}
+<div class="stage">
+  <div class="band-top">{{ m.slot('logo') }}{{ m.slot('top-right') }}</div>
+  <div class="copy-block">
+    {{ m.slot('headline') }}{{ m.slot('subheadline') }}{{ m.slot('message') }}
+    {% if elements_by_slot.get('details') %}<div class="details">{{ m.slot('details') }}</div>{% endif %}
+  </div>
+  {% if c.photo_placement.value != 'full-bleed-right' %}
+  <div class="portrait-layer">{{ m.slot('portrait') }}</div>
+  {% endif %}
+  <div class="band-bottom">
+    <div class="left">{{ m.slot('contact') }}{{ m.slot('legal') }}</div>
+    <div class="right">{{ m.slot('cta') }}{{ m.slot('qr') }}</div>
+  </div>
+</div>
+{% endblock %}

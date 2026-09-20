@@ -1,0 +1,26 @@
+[project]
+name = "aia-marketing-studio"
+version = "0.1.0"
+description = "Governed AI creative workspace for AIA Singapore representatives"
+requires-python = ">=3.12"
+dependencies = [
+    "pydantic>=2.9",
+    "pydantic-ai-slim[google]>=2.0",
+    "google-genai",
+    "pyyaml",
+    "jinja2",
+    "segno",
+    "pillow",
+    "textstat",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "pytest-cov"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 110
+target-version = "py312"

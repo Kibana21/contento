@@ -1,0 +1,171 @@
+{
+  "$schema_version": "0.2",
+  "sources": {
+    "brand_standards": "AIA Brand Standards v2.0 (brands.pdf) pp. 73-77",
+    "digital_ui": "https://design.aia.com/typography"
+  },
+  "families": {
+    "display": {
+      "family": "AIA Everest",
+      "styles": [
+        "Regular",
+        "Regular Italic",
+        "Medium",
+        "Medium Italic",
+        "Bold",
+        "Extra Bold",
+        "Condensed",
+        "Condensed Medium"
+      ],
+      "fallback": [
+        "Arial",
+        "Helvetica Neue",
+        "sans-serif"
+      ],
+      "licensed_files_available": "partial",
+      "note": "Bespoke. OTF and web fonts are on the Group Brand asset-links page. A signed font release is required before sharing with creative partners. Only Regular and Medium web fonts obtained (aia.com.sg). Until Bold/Extra Bold/Condensed are supplied, headlines use Medium.",
+      "provenance": "published (p73)",
+      "files": {
+        "Regular": "assets/fonts/AIAEverest-Regular.woff2",
+        "Medium": "assets/fonts/AIAEverest-Medium.woff2"
+      }
+    },
+    "system": {
+      "family": "Arial",
+      "note": "Only when AIA Everest is not possible",
+      "provenance": "published (p74)"
+    },
+    "digital_body": {
+      "family": "Open Sans",
+      "weights": [
+        400,
+        700
+      ],
+      "provenance": "published (p77)"
+    },
+    "chinese": {
+      "family": "Monotype Hei (MHeiPRC for Simplified, MHeiHK for Traditional)",
+      "bilingual_pairings": [
+        {
+          "chinese": "MHei Medium",
+          "english": "AIA Everest Regular"
+        },
+        {
+          "chinese": "MHei Bold",
+          "english": "AIA Everest Medium"
+        },
+        {
+          "chinese": "MHei Xbold",
+          "english": "AIA Everest Bold"
+        }
+      ],
+      "note": "Commercial licence required. Digital fallback is Noto Sans SC/TC.",
+      "provenance": "published (p75)"
+    },
+    "localisation_digital": {
+      "zh-Hans": "Noto Sans SC",
+      "zh-Hant": "Noto Sans TC",
+      "ta": "Noto Sans Tamil",
+      "ms": "AIA Everest / Open Sans",
+      "provenance": "published (p77: Noto Sans for non-English digital)"
+    }
+  },
+  "hierarchy": {
+    "subheading_to_headline_ratio": 0.3333,
+    "body_to_subheading_ratio": 0.5,
+    "min_body_size": {
+      "print_pt": 10,
+      "digital_px": 15
+    },
+    "headline_colour": {
+      "on_light": "red",
+      "on_red": "white"
+    },
+    "subheading_colour": "charcoal (white on red; see colour.json)",
+    "body_colour": "red or charcoal; white on red",
+    "observed_style": "Headlines are commonly ALL CAPS in AIA Everest Bold or Condensed in brand examples (pp. 49, 54, 76, 114, 125)",
+    "provenance": "published (p76)"
+  },
+  "script_categories": {
+    "alphabetic": {
+      "languages": [
+        "en",
+        "ms"
+      ],
+      "line_height_multiplier": {
+        "display": 1.0,
+        "body": 1.4
+      }
+    },
+    "tall": {
+      "languages": [
+        "ta",
+        "th",
+        "hi",
+        "vi",
+        "si"
+      ],
+      "line_height_multiplier": {
+        "display": 1.4,
+        "body": 1.7
+      }
+    },
+    "dense": {
+      "languages": [
+        "zh-Hans",
+        "zh-Hant",
+        "ko"
+      ],
+      "line_height_multiplier": {
+        "display": 1.25,
+        "body": 1.6
+      }
+    },
+    "provenance": "categories published (design.aia.com); multipliers proposed"
+  },
+  "poster_scale": {
+    "reference_canvas_width": 1080,
+    "unit": "px at reference width; scale with the canvas short edge",
+    "styles": {
+      "headline": {
+        "size": 90,
+        "line_height_mult": 1.0,
+        "weight": "Bold",
+        "case": "upper",
+        "family": "display"
+      },
+      "subheading": {
+        "size": 30,
+        "line_height_mult": 1.2,
+        "weight": "Medium",
+        "family": "display",
+        "rule": "= headline / 3"
+      },
+      "body": {
+        "size": 18,
+        "line_height_mult": 1.4,
+        "weight": "Regular",
+        "family": "display",
+        "rule": "= subheading / 2, floored at min 15; set to 18 for social legibility"
+      },
+      "detail": {
+        "size": 24,
+        "line_height_mult": 1.3,
+        "weight": "Medium",
+        "family": "display",
+        "note": "Event date/time/venue and contact block"
+      },
+      "legal": {
+        "size": 15,
+        "line_height_mult": 1.3,
+        "weight": "Regular",
+        "family": "display"
+      }
+    },
+    "min_font_size": {
+      "digital_px": 15,
+      "print_pt": 10
+    },
+    "provenance": "ratios published (p76); absolute sizes proposed"
+  }
+}

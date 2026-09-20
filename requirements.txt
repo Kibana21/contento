@@ -1,0 +1,9 @@
+google-genai
+pydantic>=2.9
+pydantic-ai-slim[google]>=2.0
+pyyaml
+jinja2
+segno
+pillow
+textstat
+pytest

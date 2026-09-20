@@ -1,0 +1,83 @@
+{
+  "$schema_version": "0.1",
+  "source": "AIA Brand Standards v2.0 pp. 31-40",
+  "default_variant": "corporate",
+  "variants": {
+    "hlbl_lockup": {
+      "clear_space_ratio_of_Y": 0.25,
+      "min_print_mm": 10,
+      "min_digital_px": 24,
+      "colours": [
+        "red",
+        "white"
+      ],
+      "use": "preferred, almost all cases",
+      "asset": null
+    },
+    "corporate": {
+      "clear_space_ratio_of_Y": 0.25,
+      "min_print_mm": 10,
+      "min_digital_px": 24,
+      "colours": [
+        "red",
+        "white"
+      ],
+      "use": "limited space; legal/regulatory/T&Cs (top-left only)",
+      "asset": {
+        "red": "assets/logos/corporate-logo-red.svg",
+        "white": "assets/logos/corporate-logo-white.svg"
+      }
+    },
+    "wordmark": {
+      "clear_space_ratio_of_A_height": 0.35,
+      "min_print_mm": 3,
+      "min_digital_px": 15,
+      "colours": [
+        "red",
+        "white"
+      ],
+      "use": "forbidden for agent collateral",
+      "asset": null
+    }
+  },
+  "definitions": {
+    "Y": "height of the Corporate Logo symbol"
+  },
+  "allowed_positions": [
+    "top-left",
+    "top-center",
+    "top-right",
+    "center",
+    "bottom-left",
+    "bottom-center",
+    "bottom-right"
+  ],
+  "clear_space_is_min_edge_margin": true,
+  "colour_by_background": {
+    "red": "white",
+    "white": "red",
+    "light": "red",
+    "dark_or_busy_image": "white"
+  },
+  "forbidden": [
+    "recolour",
+    "outline",
+    "stroke",
+    "shadow",
+    "distort",
+    "rotate",
+    "redraw",
+    "deconstruct",
+    "text_within_clear_space",
+    "ai_generated"
+  ],
+  "locale": {
+    "sg": "english_hlbl_only"
+  },
+  "proposed_social_height_ratio_of_short_edge": [
+    0.06,
+    0.08
+  ],
+  "asset_status": "Corporate Logo red/white SVGs available (from aia.com.sg). MISSING: HLBL lockup SVG.",
+  "default_variant_note": "HLBL lockup is preferred by Brand Standards but no asset yet; fall back to Corporate Logo (permitted). Switch default to hlbl_lockup once the SVG is supplied."
+}

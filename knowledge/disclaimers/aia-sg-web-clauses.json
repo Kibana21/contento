@@ -1,0 +1,2034 @@
+{
+  "source": "aia.com.sg crawl 2026-09-19",
+  "status": "OBSERVED on public site. NOT approved for use until AIA SG Compliance signs off.",
+  "categories": {
+    "info_as_at": [
+      {
+        "category": "info_as_at",
+        "text": "The information is correct as at 1 April 2026.",
+        "page_count": 5,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/accident-protection/aia-platinum-accidentcare",
+          "/en/our-products/accident-protection/aia-solitaire-personal-accident",
+          "/en/our-products/health/medical-insurance/aia-healthshield-gold-max",
+          "/en/our-products/platinum/accident-health/aia-platinum-accidentcare",
+          "/en/our-products/travel-and-lifestyle/travel/aia-around-the-world-plus-ii"
+        ]
+      },
+      {
+        "category": "info_as_at",
+        "text": "The information is correct as at 4 November 2024.",
+        "page_count": 5,
+        "families": [
+          "health-wellness"
+        ],
+        "example_pages": [
+          "/en/health-wellness/healthcare-services",
+          "/en/health-wellness/healthcare-services/early-detection-screening",
+          "/en/health-wellness/healthcare-services/home-care",
+          "/en/health-wellness/healthcare-services/home-palliative-care",
+          "/en/health-wellness/healthcare-services/vbc/partners/sgh"
+        ]
+      },
+      {
+        "category": "info_as_at",
+        "text": "The information is correct as at 11 August 2025.",
+        "page_count": 4,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/life-insurance/term-insurance/aia-secure-flexi-term",
+          "/en/our-products/life-insurance/whole-life-insurance/aia-guaranteed-protect-plus-iv",
+          "/en/our-products/life-insurance/whole-life-insurance/aia-life-dividends",
+          "/en/our-products/save-and-invest/participating-savings/aia-guaranteed-protect-plus-iv"
+        ]
+      },
+      {
+        "category": "info_as_at",
+        "text": "The information is correct as at 30 January 2023.",
+        "page_count": 4,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/platinum/legacy-planning/aia-platinum-legacy-ix",
+          "/en/our-products/save-and-invest/participating-savings/aia-retirement-saver-iv",
+          "/en/our-products/save-and-invest/participating-savings/aia-smart-flexi-growth",
+          "/en/our-products/save-and-invest/participating-savings/aia-smart-flexi-rewards-ii"
+        ]
+      },
+      {
+        "category": "info_as_at",
+        "text": "The information is correct as at 5 September 2025.",
+        "page_count": 4,
+        "families": [
+          "health-wellness"
+        ],
+        "example_pages": [
+          "/en/health-wellness/healthcare-services/vbc/partners/gutcare",
+          "/en/health-wellness/healthcare-services/vbc/partners/mah",
+          "/en/health-wellness/healthcare-services/vbc/partners/rh",
+          "/en/health-wellness/healthcare-services/vbc/partners/tmc"
+        ]
+      },
+      {
+        "category": "info_as_at",
+        "text": "The information is correct as at 30 May 2026.",
+        "page_count": 4,
+        "families": [
+          "health-wellness"
+        ],
+        "example_pages": [
+          "/en/health-wellness/healthcare-services/vbc/partners/eagle",
+          "/en/health-wellness/healthcare-services/vbc/partners/hmi",
+          "/en/health-wellness/healthcare-services/vbc/partners/nuh",
+          "/en/health-wellness/healthcare-services/vbc/partners/solis-luma"
+        ]
+      },
+      {
+        "category": "info_as_at",
+        "text": "The information is correct as at 25 April 2025.",
+        "page_count": 3,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/health/disability-income-insurance/aia-premier-disability-cover",
+          "/en/our-products/health/medical-insurance/aia-hospital-income",
+          "/en/our-products/health/medical-insurance/aia-platinum-international-health"
+        ]
+      },
+      {
+        "category": "info_as_at",
+        "text": "The information is correct as at 18 February 2023.",
+        "page_count": 2,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/life-insurance/term-insurance/aia-mortgage-reducing-term-assurance",
+          "/en/our-products/travel-and-lifestyle/home/aia-mortgage-reducing-term-assurance"
+        ]
+      },
+      {
+        "category": "info_as_at",
+        "text": "The information is correct as at 31 March 2025.",
+        "page_count": 1,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/health/critical-illness/aia-diabetes-care"
+        ]
+      },
+      {
+        "category": "info_as_at",
+        "text": "The information is correct as at 1 July 2025.",
+        "page_count": 1,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/health/critical-illness/aia-prime-critical-cover"
+        ]
+      },
+      {
+        "category": "info_as_at",
+        "text": "The information is correct as at 12 December 2022.",
+        "page_count": 1,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/health/medical-insurance/aia-healthshield-gold-max/shield-cancer-coverage-updates"
+        ]
+      },
+      {
+        "category": "info_as_at",
+        "text": "The information is correct as at 1 January 2026.",
+        "page_count": 1,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/health/medical-insurance/aia-mum2baby-choices"
+        ]
+      },
+      {
+        "category": "info_as_at",
+        "text": "The information is correct as at 18 April 2025.",
+        "page_count": 1,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/health/disability-income-insurance/aia-pay-protector"
+        ]
+      },
+      {
+        "category": "info_as_at",
+        "text": "The information is correct as at 22 April 2024.",
+        "page_count": 1,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/save-and-invest/participating-savings/aia-smart-wealth-builder-series"
+        ]
+      },
+      {
+        "category": "info_as_at",
+        "text": "The information is correct as at 14 August 2026.",
+        "page_count": 1,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/save-and-invest/investment-linked/aia-invest-easy"
+        ]
+      },
+      {
+        "category": "info_as_at",
+        "text": "The information in this advertisement is correct as at 5 October 2023.",
+        "page_count": 1,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/save-and-invest/aia-funds-information/featured-funds/aia-shariah-global-diversified-fund"
+        ]
+      },
+      {
+        "category": "info_as_at",
+        "text": "The information in this advertisement is correct as at 30 October 2025.",
+        "page_count": 1,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/save-and-invest/aia-funds-information/featured-funds/aia-global-adventurous-income-fund"
+        ]
+      },
+      {
+        "category": "info_as_at",
+        "text": "The information in this advertisement is correct as at 22 April 2025.",
+        "page_count": 1,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/save-and-invest/aia-funds-information/featured-funds/aia-adventurous-index-fund"
+        ]
+      },
+      {
+        "category": "info_as_at",
+        "text": "The information is correct as at 27 February 2023.",
+        "page_count": 1,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/accident-protection/aia-prime-assured"
+        ]
+      },
+      {
+        "category": "info_as_at",
+        "text": "The information is correct as at 30 January 2024.",
+        "page_count": 1,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/accident-protection/aia-star-protector-plus"
+        ]
+      },
+      {
+        "category": "info_as_at",
+        "text": "The information is correct as at 3 June 2025.",
+        "page_count": 1,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/accident-protection/aia-genfit-pa"
+        ]
+      },
+      {
+        "category": "info_as_at",
+        "text": "The information is correct as at 12 March 2024.",
+        "page_count": 1,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/platinum/wealth-accumulation/aia-platinum-gift-for-life-series"
+        ]
+      },
+      {
+        "category": "info_as_at",
+        "text": "The information is correct as at 26 January 2026.",
+        "page_count": 1,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/platinum/wealth-accumulation/aia-platinum-infinite-wealth-ii"
+        ]
+      },
+      {
+        "category": "info_as_at",
+        "text": "The information is correct as at 24 February 2023.",
+        "page_count": 1,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/platinum/legacy-planning/aia-platinum-generations-ii"
+        ]
+      },
+      {
+        "category": "info_as_at",
+        "text": "The information is correct as at 16 February 2023.",
+        "page_count": 1,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/platinum/legacy-planning/aia-platinum-heritage-wealth-ii"
+        ]
+      },
+      {
+        "category": "info_as_at",
+        "text": "The information is correct as at 20 July 2026.",
+        "page_count": 1,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/platinum/legacy-planning/aia-platinum-indexed-legacy-iii"
+        ]
+      },
+      {
+        "category": "info_as_at",
+        "text": "The information is correct as at 28 February 2023.",
+        "page_count": 1,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/travel-and-lifestyle/home/aia-elite-homecare"
+        ]
+      },
+      {
+        "category": "info_as_at",
+        "text": "This information is correct as at 1 January 2025.",
+        "page_count": 1,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/corporate-international-medical/aia-premier-international-medical"
+        ]
+      },
+      {
+        "category": "info_as_at",
+        "text": "This information is correct as at 31 March 2025.",
+        "page_count": 1,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/corporate-medical-insurance/aia-foreign-worker-protector-plus"
+        ]
+      },
+      {
+        "category": "info_as_at",
+        "text": "The information is correct as at 30 May 2025.",
+        "page_count": 1,
+        "families": [
+          "health-wellness"
+        ],
+        "example_pages": [
+          "/en/health-wellness/healthcare-services/vbc/partners/nhcs"
+        ]
+      },
+      {
+        "category": "info_as_at",
+        "text": "The information is correct as at 24 April 2026.",
+        "page_count": 1,
+        "families": [
+          "health-wellness"
+        ],
+        "example_pages": [
+          "/en/health-wellness/healthcare-services/vbc/partners/nhg"
+        ]
+      },
+      {
+        "category": "info_as_at",
+        "text": "The information is correct as at Nov 29, 2023.",
+        "page_count": 1,
+        "families": [
+          "health-wellness"
+        ],
+        "example_pages": [
+          "/en/health-wellness/healthy-living-with-aia/discover-a-gateway-to-opulent-travel-experiences"
+        ]
+      },
+      {
+        "category": "info_as_at",
+        "text": "The information is correct as at 1 July 2026.",
+        "page_count": 1,
+        "families": [
+          "promotions"
+        ],
+        "example_pages": [
+          "/en/promotions/aia-asia-wanderlust"
+        ]
+      },
+      {
+        "category": "info_as_at",
+        "text": "The information is correct as at 1 November 2025.",
+        "page_count": 1,
+        "families": [
+          "promotions"
+        ],
+        "example_pages": [
+          "/en/promotions/maturity-campaign"
+        ]
+      },
+      {
+        "category": "info_as_at",
+        "text": "This information is correct as at 1 July 2026.",
+        "page_count": 1,
+        "families": [
+          "promotions"
+        ],
+        "example_pages": [
+          "/en/promotions/aia-family360"
+        ]
+      },
+      {
+        "category": "info_as_at",
+        "text": "This information is correct as at 15 September 2026​.",
+        "page_count": 1,
+        "families": [
+          "promotions"
+        ],
+        "example_pages": [
+          "/en/promotions/aia-protect360"
+        ]
+      },
+      {
+        "category": "info_as_at",
+        "text": "The information is correct as at 8 December 2025.",
+        "page_count": 1,
+        "families": [
+          "promotions"
+        ],
+        "example_pages": [
+          "/en/promotions/maturity-campaign-2026"
+        ]
+      },
+      {
+        "category": "info_as_at",
+        "text": "This information is correct as at 12 January 2026.",
+        "page_count": 1,
+        "families": [
+          "promotions"
+        ],
+        "example_pages": [
+          "/en/promotions/ai-plus-a"
+        ]
+      },
+      {
+        "category": "info_as_at",
+        "text": "*Information is correct as at 26 August 2025",
+        "page_count": 1,
+        "families": [
+          "help-support"
+        ],
+        "example_pages": [
+          "/en/help-support/faq/aia-healthshield-gold-max/updates-faqs"
+        ]
+      },
+      {
+        "category": "info_as_at",
+        "text": "The information is correct as at 07 July 2021.",
+        "page_count": 1,
+        "families": [
+          "aia-retirement-solutions"
+        ],
+        "example_pages": [
+          "/en/aia-retirement-solutions"
+        ]
+      }
+    ],
+    "investment_risk": [
+      {
+        "category": "investment_risk",
+        "text": "Past performance of the ILP Funds is not necessarily indicative of its future performance.",
+        "page_count": 4,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/save-and-invest/aia-funds-information/aia-fund-price",
+          "/en/our-products/save-and-invest/aia-funds-information/featured-funds/aia-shariah-global-diversified-fund",
+          "/en/our-products/save-and-invest/aia-funds-information/fund-annual-performance",
+          "/en/our-products/save-and-invest/aia-funds-information/fund-performance"
+        ]
+      },
+      {
+        "category": "investment_risk",
+        "text": "The performance of the ILP funds are not guaranteed and the value of the units in the ILP funds and the income accruing to the units, if any, may fall or rise.",
+        "page_count": 4,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/save-and-invest/aia-funds-information/aia-fund-price",
+          "/en/our-products/save-and-invest/aia-funds-information/featured-funds/aia-shariah-global-diversified-fund",
+          "/en/our-products/save-and-invest/aia-funds-information/fund-annual-performance",
+          "/en/our-products/save-and-invest/aia-funds-information/fund-performance"
+        ]
+      },
+      {
+        "category": "investment_risk",
+        "text": "Disclaimer: Investments are subject to investment risks including the possible loss of the principal amount invested.",
+        "page_count": 3,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/save-and-invest/aia-funds-information/aia-fund-price",
+          "/en/our-products/save-and-invest/aia-funds-information/fund-annual-performance",
+          "/en/our-products/save-and-invest/aia-funds-information/fund-performance"
+        ]
+      },
+      {
+        "category": "investment_risk",
+        "text": "Past performance is no guarantee of future results.",
+        "page_count": 3,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/save-and-invest/aia-funds-information/aia-fund-price",
+          "/en/our-products/save-and-invest/aia-funds-information/fund-annual-performance",
+          "/en/our-products/save-and-invest/aia-funds-information/fund-performance"
+        ]
+      },
+      {
+        "category": "investment_risk",
+        "text": "Investments are subject to investment risks including the possible loss of the principal amount invested.",
+        "page_count": 3,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/save-and-invest/aia-funds-information/featured-funds/aia-adventurous-index-fund",
+          "/en/our-products/save-and-invest/aia-funds-information/featured-funds/aia-global-adventurous-income-fund",
+          "/en/our-products/save-and-invest/aia-funds-information/featured-funds/aia-shariah-global-diversified-fund"
+        ]
+      },
+      {
+        "category": "investment_risk",
+        "text": "Dividends are not guaranteed.The frequency of dividend distribution of an ILP Sub-Fund is not guaranteed and determined by us at our sole discretion.",
+        "page_count": 1,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/save-and-invest/investment-linked/aia-invest-easy"
+        ]
+      },
+      {
+        "category": "investment_risk",
+        "text": "Where dividend distributions are made out of capital, it may lead to a reduction in investor's original investment and may also result in reduced future returns to the investor.Both capital and dividend distributions are not guaranteed.",
+        "page_count": 1,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/save-and-invest/investment-linked/aia-invest-easy"
+        ]
+      },
+      {
+        "category": "investment_risk",
+        "text": "Investments in this plan are subject to investment risks including the possible loss of the principal amount invested.",
+        "page_count": 1,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/save-and-invest/investment-linked/aia-invest-easy"
+        ]
+      },
+      {
+        "category": "investment_risk",
+        "text": "The performance of the ILP sub-fund(s) is not guaranteed and the value of the units in the ILP sub-fund(s) and the income accruing to the units, if any, may fall or rise.",
+        "page_count": 1,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/save-and-invest/investment-linked/aia-invest-easy"
+        ]
+      },
+      {
+        "category": "investment_risk",
+        "text": "Past performance is not necessarily indicative of the future performance of the ILP sub-fund(s).",
+        "page_count": 1,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/save-and-invest/investment-linked/aia-invest-easy"
+        ]
+      },
+      {
+        "category": "investment_risk",
+        "text": "Past performance of the ILP sub-fund is not necessarily indicative its future performance.",
+        "page_count": 1,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/save-and-invest/aia-funds-information/featured-funds/aia-global-adventurous-income-fund"
+        ]
+      },
+      {
+        "category": "investment_risk",
+        "text": "The performance of the ILP sub-fund is not guaranteed and the value of the units in the ILP sub-fund and the income accruing to the units, if any, may fall or rise.",
+        "page_count": 1,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/save-and-invest/aia-funds-information/featured-funds/aia-global-adventurous-income-fund"
+        ]
+      },
+      {
+        "category": "investment_risk",
+        "text": "Past performance of the ILP Sub-Fund(s) is not necessarily indicative of its future performance.",
+        "page_count": 1,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/save-and-invest/aia-funds-information/featured-funds/aia-adventurous-index-fund"
+        ]
+      },
+      {
+        "category": "investment_risk",
+        "text": "The performance of the ILP Sub-Fund(s) is not guaranteed and the value of the units in the ILP Sub-Fund(s) and the income accruing to the units, if any, may fall or rise.",
+        "page_count": 1,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/save-and-invest/aia-funds-information/featured-funds/aia-adventurous-index-fund"
+        ]
+      },
+      {
+        "category": "investment_risk",
+        "text": "Both capital and dividend distributions are not guaranteed.",
+        "page_count": 1,
+        "families": [
+          "health-wellness"
+        ],
+        "example_pages": [
+          "/en/health-wellness/healthy-living-with-aia/discover-a-gateway-to-opulent-travel-experiences"
+        ]
+      }
+    ],
+    "long_term_commitment": [
+      {
+        "category": "long_term_commitment",
+        "text": "As buying a life insurance policy is a long-term commitment, an early termination of the policy usually involves high costs and the surrender value, if any, that is payable to you may be zero or less than the total premiums paid.",
+        "page_count": 21,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/health/critical-illness/aia-diabetes-care",
+          "/en/our-products/health/critical-illness/aia-prime-critical-cover",
+          "/en/our-products/health/disability-income-insurance/aia-premier-disability-cover",
+          "/en/our-products/health/medical-insurance/aia-mum2baby-choices",
+          "/en/our-products/life-insurance/term-insurance/aia-mortgage-reducing-term-assurance"
+        ]
+      },
+      {
+        "category": "long_term_commitment",
+        "text": "A penalty may be imposed for early termination and the new policy may cost more or have fewer benefits at the same cost.",
+        "page_count": 2,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/accident-protection/aia-prime-assured",
+          "/en/our-products/health/medical-insurance/aia-platinum-international-health"
+        ]
+      }
+    ],
+    "mas_not_reviewed": [
+      {
+        "category": "mas_not_reviewed",
+        "text": "This advertisement has not been reviewed by the Monetary Authority of Singapore.",
+        "page_count": 46,
+        "families": [
+          "aia-retirement-solutions",
+          "health-wellness",
+          "our-products",
+          "promotions"
+        ],
+        "example_pages": [
+          "/en/aia-retirement-solutions",
+          "/en/health-wellness/healthy-living-with-aia/discover-a-gateway-to-opulent-travel-experiences",
+          "/en/our-products/accident-protection/aia-genfit-pa",
+          "/en/our-products/accident-protection/aia-platinum-accidentcare",
+          "/en/our-products/accident-protection/aia-prime-assured"
+        ]
+      },
+      {
+        "category": "mas_not_reviewed",
+        "text": "For more information on the types of benefits that are covered under the scheme as well as the limits of coverage, where applicable, please contact your insurer or visit the GIA/LIA or SDIC websites (www.gia.org.sg or www.lia.org.sg or www.sdic.org.sg) This advertisement has not been reviewed by the Monetary Authority of Singapore.",
+        "page_count": 1,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/health/medical-insurance/aia-healthshield-gold-max"
+        ]
+      }
+    ],
+    "not_contract": [
+      {
+        "category": "not_contract",
+        "text": "All insurance applications are subject to AIA's underwriting and acceptance.",
+        "page_count": 56,
+        "families": [
+          "aia-retirement-solutions",
+          "health-wellness",
+          "our-products",
+          "promotions"
+        ],
+        "example_pages": [
+          "/en/aia-retirement-solutions",
+          "/en/health-wellness/healthcare-services",
+          "/en/health-wellness/healthcare-services/early-detection-screening",
+          "/en/health-wellness/healthcare-services/home-care",
+          "/en/health-wellness/healthcare-services/home-palliative-care"
+        ]
+      },
+      {
+        "category": "not_contract",
+        "text": "This is not a contract of insurance.",
+        "page_count": 49,
+        "families": [
+          "health-wellness",
+          "our-products",
+          "promotions"
+        ],
+        "example_pages": [
+          "/en/health-wellness/healthcare-services",
+          "/en/health-wellness/healthcare-services/early-detection-screening",
+          "/en/health-wellness/healthcare-services/home-care",
+          "/en/health-wellness/healthcare-services/home-palliative-care",
+          "/en/health-wellness/healthcare-services/vbc/partners/eagle"
+        ]
+      },
+      {
+        "category": "not_contract",
+        "text": "This information is not a contract of insurance.",
+        "page_count": 4,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/platinum/legacy-planning/aia-platinum-indexed-legacy-iii",
+          "/en/our-products/platinum/wealth-accumulation/aia-platinum-gift-for-life-series",
+          "/en/our-products/platinum/wealth-accumulation/aia-platinum-infinite-wealth-ii",
+          "/en/our-products/save-and-invest/participating-savings/aia-retirement-saver-iv"
+        ]
+      }
+    ],
+    "ppf_scheme": [
+      {
+        "category": "ppf_scheme",
+        "text": "Coverage for your policy is automatic and no further action is required from you.",
+        "page_count": 57,
+        "families": [
+          "aia-retirement-solutions",
+          "health-wellness",
+          "our-products",
+          "promotions"
+        ],
+        "example_pages": [
+          "/en/aia-retirement-solutions",
+          "/en/health-wellness/healthcare-services",
+          "/en/health-wellness/healthcare-services/early-detection-screening",
+          "/en/health-wellness/healthcare-services/home-care",
+          "/en/health-wellness/healthcare-services/home-palliative-care"
+        ]
+      },
+      {
+        "category": "ppf_scheme",
+        "text": "This policy is protected under the Policy Owners' Protection Scheme which is administered by the Singapore Deposit Insurance Corporation (SDIC).",
+        "page_count": 39,
+        "families": [
+          "aia-retirement-solutions",
+          "our-products",
+          "promotions"
+        ],
+        "example_pages": [
+          "/en/aia-retirement-solutions",
+          "/en/our-products/accident-protection/aia-genfit-pa",
+          "/en/our-products/accident-protection/aia-platinum-accidentcare",
+          "/en/our-products/accident-protection/aia-prime-assured",
+          "/en/our-products/accident-protection/aia-solitaire-personal-accident"
+        ]
+      },
+      {
+        "category": "ppf_scheme",
+        "text": "For more information on the types of benefits that are covered under the scheme as well as the limits of coverage, where applicable, please contact your insurer or visit the GIA/LIA or SDIC web-sites (www.gia.org.sg or www.lia.org.sg or www.sdic.org.sg).",
+        "page_count": 35,
+        "families": [
+          "aia-retirement-solutions",
+          "our-products",
+          "promotions"
+        ],
+        "example_pages": [
+          "/en/aia-retirement-solutions",
+          "/en/our-products/accident-protection/aia-genfit-pa",
+          "/en/our-products/accident-protection/aia-platinum-accidentcare",
+          "/en/our-products/accident-protection/aia-prime-assured",
+          "/en/our-products/accident-protection/aia-solitaire-personal-accident"
+        ]
+      },
+      {
+        "category": "ppf_scheme",
+        "text": "For more information on the types of benefits that are covered under the scheme as well as the limits of coverage, where applicable, please contact your insurer or visit the GIA/LIA or SDIC websites (www.gia.org.sg or www.lia.org.sg or www.sdic.org.sg).",
+        "page_count": 20,
+        "families": [
+          "health-wellness",
+          "our-products",
+          "promotions"
+        ],
+        "example_pages": [
+          "/en/health-wellness/healthcare-services",
+          "/en/health-wellness/healthcare-services/early-detection-screening",
+          "/en/health-wellness/healthcare-services/home-care",
+          "/en/health-wellness/healthcare-services/home-palliative-care",
+          "/en/health-wellness/healthcare-services/vbc/partners/eagle"
+        ]
+      },
+      {
+        "category": "ppf_scheme",
+        "text": "These policies are protected under the Policy Owners' Protection Scheme which is administered by the Singapore Deposit Insurance Corporation (SDIC).",
+        "page_count": 18,
+        "families": [
+          "health-wellness",
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/health-wellness/healthcare-services",
+          "/en/health-wellness/healthcare-services/early-detection-screening",
+          "/en/health-wellness/healthcare-services/home-care",
+          "/en/health-wellness/healthcare-services/home-palliative-care",
+          "/en/health-wellness/healthcare-services/vbc/partners/eagle"
+        ]
+      },
+      {
+        "category": "ppf_scheme",
+        "text": "For more information on the types of benefits that are covered under the scheme as well as the limits of coverage, where applicable, please contact your insurer or visit the GIA/LIA or SDIC web-sites.",
+        "page_count": 2,
+        "families": [
+          "promotions"
+        ],
+        "example_pages": [
+          "/en/promotions/maturity-campaign",
+          "/en/promotions/maturity-campaign-2026"
+        ]
+      },
+      {
+        "category": "ppf_scheme",
+        "text": "This policy is protected under the Policy Owners’ Protection Scheme which is administered by the Singapore Deposit Insurance Corporation (SDIC).",
+        "page_count": 1,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/life-insurance/whole-life-insurance/aia-life-dividends"
+        ]
+      }
+    ],
+    "product_specific": [
+      {
+        "category": "product_specific",
+        "text": "Collection and Use of Personal Data: Any and all personal data provided to us will be used to ascertain your eligibility to access the services and other information herein.",
+        "page_count": 14,
+        "families": [
+          "health-wellness"
+        ],
+        "example_pages": [
+          "/en/health-wellness/healthcare-services",
+          "/en/health-wellness/healthcare-services/home-care",
+          "/en/health-wellness/healthcare-services/home-palliative-care",
+          "/en/health-wellness/healthcare-services/vbc/partners/eagle",
+          "/en/health-wellness/healthcare-services/vbc/partners/gutcare"
+        ]
+      },
+      {
+        "category": "product_specific",
+        "text": "The collection, use, disclosure, and retention of your personal data is subject to the AIA Privacy Policy Statement (Singapore), to which you agree and accept.",
+        "page_count": 12,
+        "families": [
+          "health-wellness"
+        ],
+        "example_pages": [
+          "/en/health-wellness/healthcare-services",
+          "/en/health-wellness/healthcare-services/home-care",
+          "/en/health-wellness/healthcare-services/home-palliative-care",
+          "/en/health-wellness/healthcare-services/vbc/partners/eagle",
+          "/en/health-wellness/healthcare-services/vbc/partners/hmi"
+        ]
+      },
+      {
+        "category": "product_specific",
+        "text": "Any claim or benefit payable is subject to deduction of any amounts owing to us.",
+        "page_count": 6,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/health/critical-illness/aia-prime-critical-cover",
+          "/en/our-products/health/medical-insurance/aia-healthshield-gold-max",
+          "/en/our-products/life-insurance/term-insurance/aia-secure-flexi-term",
+          "/en/our-products/life-insurance/whole-life-insurance/aia-guaranteed-protect-plus-iv",
+          "/en/our-products/life-insurance/whole-life-insurance/aia-life-dividends"
+        ]
+      },
+      {
+        "category": "product_specific",
+        "text": "Most of the benefits of this policy will be payable upon the occurrence of an accident.",
+        "page_count": 5,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/accident-protection/aia-genfit-pa",
+          "/en/our-products/accident-protection/aia-platinum-accidentcare",
+          "/en/our-products/accident-protection/aia-prime-assured",
+          "/en/our-products/accident-protection/aia-star-protector-plus",
+          "/en/our-products/platinum/accident-health/aia-platinum-accidentcare"
+        ]
+      },
+      {
+        "category": "product_specific",
+        "text": "It is not applicable to any extra premiums due to loading.",
+        "page_count": 3,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/health/critical-illness/aia-beyond-critical-care",
+          "/en/our-products/health/critical-illness/aia-ultimate-critical-cover",
+          "/en/our-products/life-insurance/whole-life-insurance/aia-life-dividends"
+        ]
+      },
+      {
+        "category": "product_specific",
+        "text": "The discount is capped at 15%.",
+        "page_count": 3,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/health/critical-illness/aia-beyond-critical-care",
+          "/en/our-products/health/critical-illness/aia-ultimate-critical-cover",
+          "/en/our-products/life-insurance/whole-life-insurance/aia-life-dividends"
+        ]
+      },
+      {
+        "category": "product_specific",
+        "text": "Waiting period and survival period are applicable before the benefits will be payable.",
+        "page_count": 3,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/health/critical-illness/aia-prime-critical-cover",
+          "/en/our-products/life-insurance/whole-life-insurance/aia-guaranteed-protect-plus-iv",
+          "/en/our-products/save-and-invest/participating-savings/aia-guaranteed-protect-plus-iv"
+        ]
+      },
+      {
+        "category": "product_specific",
+        "text": "All fund prices shown here are indicative only and are subject to change without prior notice.",
+        "page_count": 3,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/save-and-invest/aia-funds-information/aia-fund-price",
+          "/en/our-products/save-and-invest/aia-funds-information/fund-annual-performance",
+          "/en/our-products/save-and-invest/aia-funds-information/fund-performance"
+        ]
+      },
+      {
+        "category": "product_specific",
+        "text": "Performance of the ILP funds are calculated in SGD or USD on a bid to bid basis with any income or dividends reinvested, but excluding such fees and/or charges which may be payable through deduction of premium or cancellation of units.",
+        "page_count": 3,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/save-and-invest/aia-funds-information/aia-fund-price",
+          "/en/our-products/save-and-invest/aia-funds-information/fund-annual-performance",
+          "/en/our-products/save-and-invest/aia-funds-information/fund-performance"
+        ]
+      },
+      {
+        "category": "product_specific",
+        "text": "AIA accepts no liability for any loss whatsoever arising directly or indirectly from any use of or reliance on the information provided herein.",
+        "page_count": 3,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/save-and-invest/aia-funds-information/aia-fund-price",
+          "/en/our-products/save-and-invest/aia-funds-information/fund-annual-performance",
+          "/en/our-products/save-and-invest/aia-funds-information/fund-performance"
+        ]
+      },
+      {
+        "category": "product_specific",
+        "text": "© Copyright 2023 Morningstar.",
+        "page_count": 3,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/save-and-invest/aia-funds-information/aia-fund-price",
+          "/en/our-products/save-and-invest/aia-funds-information/fund-annual-performance",
+          "/en/our-products/save-and-invest/aia-funds-information/fund-performance"
+        ]
+      },
+      {
+        "category": "product_specific",
+        "text": "The information contained herein: (1) is proprietary to Morningstar and/or its content providers; (2) may not be copied or distributed; and (3) is not warranted to be accurate, complete or timely.",
+        "page_count": 3,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/save-and-invest/aia-funds-information/aia-fund-price",
+          "/en/our-products/save-and-invest/aia-funds-information/fund-annual-performance",
+          "/en/our-products/save-and-invest/aia-funds-information/fund-performance"
+        ]
+      },
+      {
+        "category": "product_specific",
+        "text": "Neither Morningstar nor its content providers are responsible for any damages or losses arising from any use of this information.",
+        "page_count": 3,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/save-and-invest/aia-funds-information/aia-fund-price",
+          "/en/our-products/save-and-invest/aia-funds-information/fund-annual-performance",
+          "/en/our-products/save-and-invest/aia-funds-information/fund-performance"
+        ]
+      },
+      {
+        "category": "product_specific",
+        "text": "Please seek professional financial advice from your AIA Financial Services Consultant or Insurance Representative before making a purchase.",
+        "page_count": 3,
+        "families": [
+          "aia-retirement-solutions",
+          "promotions"
+        ],
+        "example_pages": [
+          "/en/aia-retirement-solutions",
+          "/en/promotions/maturity-campaign",
+          "/en/promotions/maturity-campaign-2026"
+        ]
+      },
+      {
+        "category": "product_specific",
+        "text": "Discount applicable from the second policy year onwards will depend on the AIA Vitality Status attained.",
+        "page_count": 2,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/health/critical-illness/aia-beyond-critical-care",
+          "/en/our-products/health/critical-illness/aia-ultimate-critical-cover"
+        ]
+      },
+      {
+        "category": "product_specific",
+        "text": "You may wish to seek advice from an AIA Financial Services Consultant for a financial analysis before purchasing this policy.",
+        "page_count": 2,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/accident-protection/aia-platinum-accidentcare",
+          "/en/our-products/platinum/accident-health/aia-platinum-accidentcare"
+        ]
+      },
+      {
+        "category": "product_specific",
+        "text": "The collection, use, disclosure, and retention of your personal data is subject to the AIA Personal Data Policy (Singapore), to which you agree and accept.",
+        "page_count": 2,
+        "families": [
+          "health-wellness"
+        ],
+        "example_pages": [
+          "/en/health-wellness/healthcare-services/vbc/partners/gutcare",
+          "/en/health-wellness/healthcare-services/vbc/partners/mah"
+        ]
+      },
+      {
+        "category": "product_specific",
+        "text": "I/We understand and agree that should a Relevant Person be found at any time to be a Prohibited Person, AIA is entitled, at its absolute discretion and without any liability to me/us, to (i) decline, block, suspend or cancel this application or any request, instruction, or transaction including any payment, transfer or receipt of money; (ii) decline to provide cover or to pay any claim or benefit under the Policy; and (iii) immediately terminate or void the Policy.",
+        "page_count": 2,
+        "families": [
+          "help-support"
+        ],
+        "example_pages": [
+          "/en/help-support/digital-payments/paynow",
+          "/en/help-support/digital-payments/terms-and-conditions"
+        ]
+      },
+      {
+        "category": "product_specific",
+        "text": "AIA's decision in exercising this right shall be final.",
+        "page_count": 2,
+        "families": [
+          "help-support"
+        ],
+        "example_pages": [
+          "/en/help-support/digital-payments/paynow",
+          "/en/help-support/digital-payments/terms-and-conditions"
+        ]
+      },
+      {
+        "category": "product_specific",
+        "text": "This right may only be waived in writing; no delay or failure in exercising this right shall be deemed as a waiver of the same.",
+        "page_count": 2,
+        "families": [
+          "help-support"
+        ],
+        "example_pages": [
+          "/en/help-support/digital-payments/paynow",
+          "/en/help-support/digital-payments/terms-and-conditions"
+        ]
+      },
+      {
+        "category": "product_specific",
+        "text": "\"Relevant Person\" includes (a) persons and entities who are the policy holders, insured persons, beneficiaries, trustees, payees, or assigns; (b) their beneficial owners or affiliates; (c) (in the case of an entity) their directors, partners, or direct/indirect shareholders or persons having executive authority, or (d) natural persons appointed to act on their behalf.",
+        "page_count": 2,
+        "families": [
+          "help-support"
+        ],
+        "example_pages": [
+          "/en/help-support/digital-payments/paynow",
+          "/en/help-support/digital-payments/terms-and-conditions"
+        ]
+      },
+      {
+        "category": "product_specific",
+        "text": "\"Prohibited Person\" includes a person or entity that is subject to any sanction, prohibition or restriction administered by any regulatory authority in any country or jurisdiction, such that the provision of such cover, payment of such claim or provision of such benefit may in AIA's opinion expose it to any, or any risk of. sanction, prohibition or restriction.",
+        "page_count": 2,
+        "families": [
+          "help-support"
+        ],
+        "example_pages": [
+          "/en/help-support/digital-payments/paynow",
+          "/en/help-support/digital-payments/terms-and-conditions"
+        ]
+      },
+      {
+        "category": "product_specific",
+        "text": "As an ongoing obligation, I/we will immediately inform AIA if there are any changes to the identities, status, constitution, establishment, particulars and identification documents of these Relevant Persons, I/we will indemnify AIA and hold it harmless from and against any and all related losses, damages, costs and/or expenses suffered and/or incurred, including but not limited to legal costs.",
+        "page_count": 2,
+        "families": [
+          "help-support"
+        ],
+        "example_pages": [
+          "/en/help-support/digital-payments/paynow",
+          "/en/help-support/digital-payments/terms-and-conditions"
+        ]
+      }
+    ],
+    "promo_tnc": [
+      {
+        "category": "promo_tnc",
+        "text": "Terms and conditions apply.",
+        "page_count": 2,
+        "families": [
+          "health-wellness"
+        ],
+        "example_pages": [
+          "/en/health-wellness/healthcare-services/early-detection-screening",
+          "/en/health-wellness/healthy-living-with-aia/discover-a-gateway-to-opulent-travel-experiences"
+        ]
+      },
+      {
+        "category": "promo_tnc",
+        "text": "Notes: Eligible AIA plans include AIA Guaranteed Protect Plus (IV), AIA Pro Lifetime Protector (II), AIA Secure Flexi Term, AIA Ultimate Critical Cover, and AIA Absolute Critical Cover.AIA Protect 360 (III) Campaign Terms and Conditions apply.Hong Kong SAR refers to the Hong Kong Special Administrative Region.Macau SAR refers to the Macau Special Administrative Region.",
+        "page_count": 1,
+        "families": [
+          "about-aia"
+        ],
+        "example_pages": [
+          "/en/about-aia/media-centre/press-releases/2026/aia-singapore-surpasses-40-billion-in-payouts-over-the-last-decade"
+        ]
+      },
+      {
+        "category": "promo_tnc",
+        "text": "AIA Protect 360 (III) Campaign Terms and Conditions apply.",
+        "page_count": 1,
+        "families": [
+          "about-aia"
+        ],
+        "example_pages": [
+          "/en/about-aia/media-centre/press-releases/2026/aia-singapore-surpasses-40-billion-in-payouts-over-the-last-decade"
+        ]
+      }
+    ],
+    "read_contract": [
+      {
+        "category": "read_contract",
+        "text": "You are advised to read the policy contract.",
+        "page_count": 22,
+        "families": [
+          "our-products",
+          "promotions"
+        ],
+        "example_pages": [
+          "/en/our-products/accident-protection/aia-platinum-accidentcare",
+          "/en/our-products/accident-protection/aia-prime-assured",
+          "/en/our-products/corporate-international-medical/aia-premier-international-medical",
+          "/en/our-products/corporate-medical-insurance/aia-foreign-worker-protector-plus",
+          "/en/our-products/health/disability-income-insurance/aia-pay-protector"
+        ]
+      },
+      {
+        "category": "read_contract",
+        "text": "The precise terms and conditions of this plan, including exclusions whereby the benefits under your policy may not be paid out, are specified in the policy contract.",
+        "page_count": 19,
+        "families": [
+          "our-products",
+          "promotions"
+        ],
+        "example_pages": [
+          "/en/our-products/accident-protection/aia-platinum-accidentcare",
+          "/en/our-products/accident-protection/aia-prime-assured",
+          "/en/our-products/corporate-international-medical/aia-premier-international-medical",
+          "/en/our-products/corporate-medical-insurance/aia-foreign-worker-protector-plus",
+          "/en/our-products/health/disability-income-insurance/aia-premier-disability-cover"
+        ]
+      },
+      {
+        "category": "read_contract",
+        "text": "You are advised to read the policy contract for the precise terms and conditions of the plan.",
+        "page_count": 15,
+        "families": [
+          "health-wellness"
+        ],
+        "example_pages": [
+          "/en/health-wellness/healthcare-services",
+          "/en/health-wellness/healthcare-services/early-detection-screening",
+          "/en/health-wellness/healthcare-services/home-care",
+          "/en/health-wellness/healthcare-services/home-palliative-care",
+          "/en/health-wellness/healthcare-services/vbc/partners/eagle"
+        ]
+      },
+      {
+        "category": "read_contract",
+        "text": "You are advised to read the policy contracts.",
+        "page_count": 7,
+        "families": [
+          "our-products",
+          "promotions"
+        ],
+        "example_pages": [
+          "/en/our-products/accident-protection/aia-star-protector-plus",
+          "/en/our-products/health/critical-illness/aia-diabetes-care",
+          "/en/our-products/platinum/wealth-accumulation/aia-platinum-gift-for-life-series",
+          "/en/our-products/save-and-invest/participating-savings/aia-retirement-saver-iv",
+          "/en/our-products/save-and-invest/participating-savings/aia-smart-wealth-builder-series"
+        ]
+      },
+      {
+        "category": "read_contract",
+        "text": "You are advised to read the policy contract for details and the definition of all covered conditions.",
+        "page_count": 6,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/accident-protection/aia-genfit-pa",
+          "/en/our-products/accident-protection/aia-solitaire-personal-accident",
+          "/en/our-products/life-insurance/term-insurance/aia-secure-flexi-term",
+          "/en/our-products/life-insurance/whole-life-insurance/aia-guaranteed-protect-plus-iv",
+          "/en/our-products/life-insurance/whole-life-insurance/aia-life-dividends"
+        ]
+      },
+      {
+        "category": "read_contract",
+        "text": "The precise terms and conditions of this plan, including exclusions such as pre-existing conditions whereby the benefits under your policy may not be paid out, are specified in the policy contract.",
+        "page_count": 4,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/accident-protection/aia-genfit-pa",
+          "/en/our-products/accident-protection/aia-solitaire-personal-accident",
+          "/en/our-products/health/critical-illness/aia-prime-critical-cover",
+          "/en/our-products/life-insurance/term-insurance/aia-secure-flexi-term"
+        ]
+      },
+      {
+        "category": "read_contract",
+        "text": "The precise terms and conditions of this plan, including exclusions whereby the benefits under this plan may not be paid out, are specified in the policy contract.",
+        "page_count": 4,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/health/disability-income-insurance/aia-pay-protector",
+          "/en/our-products/life-insurance/whole-life-insurance/aia-life-dividends",
+          "/en/our-products/save-and-invest/participating-savings/aia-smart-flexi-growth",
+          "/en/our-products/save-and-invest/participating-savings/aia-smart-flexi-rewards-ii"
+        ]
+      },
+      {
+        "category": "read_contract",
+        "text": "Please refer to the Product Summary applicable to the investment-linked policy which you have purchased or intend to purchase, for the available ILP Sub-Funds.",
+        "page_count": 3,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/save-and-invest/aia-funds-information/aia-fund-price",
+          "/en/our-products/save-and-invest/aia-funds-information/fund-annual-performance",
+          "/en/our-products/save-and-invest/aia-funds-information/fund-performance"
+        ]
+      },
+      {
+        "category": "read_contract",
+        "text": "The precise terms and conditions of these plans, including exclusions whereby the benefits under your policy may not be paid out, are specified in the relevant policy contracts.",
+        "page_count": 2,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/health/medical-insurance/aia-mum2baby-choices",
+          "/en/our-products/save-and-invest/participating-savings/aia-retirement-saver-iv"
+        ]
+      },
+      {
+        "category": "read_contract",
+        "text": "The precise terms and conditions of this plan, including exclusions such as pre-existing conditions whereby the benefits under this plan may not be paid out, are specified in the policy contract.",
+        "page_count": 2,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/life-insurance/whole-life-insurance/aia-guaranteed-protect-plus-iv",
+          "/en/our-products/save-and-invest/participating-savings/aia-guaranteed-protect-plus-iv"
+        ]
+      },
+      {
+        "category": "read_contract",
+        "text": "The precise terms and conditions of this plan, including exclusions whereby the benefits under this plan may not be paid out, are specified in the policy contracts.",
+        "page_count": 2,
+        "families": [
+          "promotions"
+        ],
+        "example_pages": [
+          "/en/promotions/aia-family360",
+          "/en/promotions/aia-protect360"
+        ]
+      },
+      {
+        "category": "read_contract",
+        "text": "Please refer to the product summary and contract for the detailed coverage period and payout limit for each of the benefits/conditions covered under the AIA Absolute Critical Cover and ASCC Booster.",
+        "page_count": 1,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/health/critical-illness/aia-absolute-critical-cover"
+        ]
+      },
+      {
+        "category": "read_contract",
+        "text": "Please refer to the product summary for the definition of \"Total Annual Premiums\" and benefit exclusions.",
+        "page_count": 1,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/health/critical-illness/aia-beyond-critical-care"
+        ]
+      },
+      {
+        "category": "read_contract",
+        "text": "The precise terms and conditions of these plans, including exclusions whereby the benefits under your policy may not be paid out, are specified in the policy contract.",
+        "page_count": 1,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/health/critical-illness/aia-diabetes-care"
+        ]
+      },
+      {
+        "category": "read_contract",
+        "text": "The total amounts payable for the early and intermediate stage of the same critical illness shall not exceed S$350,000 per life combined across all the UCC policies covering the same insured.Please refer to the product summary and contract for the detailed benefits/conditions covered under the AIA Ultimate Critical Cover (UCC) and UCC Enhancer.For policy term To-Age-65, the maximum entry age is 55 age last birthday; for policy term To-Age-75 and To-Age-85, the maximum entry age is 65 age last birthday.The AIA Vitality premium discount is only applicable to premiums based on a standard life.",
+        "page_count": 1,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/health/critical-illness/aia-ultimate-critical-cover"
+        ]
+      },
+      {
+        "category": "read_contract",
+        "text": "Please refer to the product summary and contract for the detailed benefits/conditions covered under the AIA Ultimate Critical Cover (UCC) and UCC Enhancer.",
+        "page_count": 1,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/health/critical-illness/aia-ultimate-critical-cover"
+        ]
+      },
+      {
+        "category": "read_contract",
+        "text": "The precise terms and conditions of these plans, including exclusions such as pre-existing conditions whereby the benefits under these plans may not be paid out, are specified in the policy contracts.",
+        "page_count": 1,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/health/medical-insurance/aia-healthshield-gold-max"
+        ]
+      },
+      {
+        "category": "read_contract",
+        "text": "You are advised to read the policy contracts for details and the definition of all covered conditions.",
+        "page_count": 1,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/health/medical-insurance/aia-healthshield-gold-max"
+        ]
+      },
+      {
+        "category": "read_contract",
+        "text": "The precise terms and conditions of these plans, including exclusions whereby the benefits under these plans may not be paid out, are specified in the policy contracts.",
+        "page_count": 1,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/save-and-invest/participating-savings/aia-smart-wealth-builder-series"
+        ]
+      },
+      {
+        "category": "read_contract",
+        "text": "The precise terms and conditions of these plans, including exclusions whereby the benefits under your policies may not be paid out, are specified in the policy contracts.",
+        "page_count": 1,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/accident-protection/aia-star-protector-plus"
+        ]
+      },
+      {
+        "category": "read_contract",
+        "text": "The precise terms and conditions of these plans, including exclusions whereby the benefits under your policy may not be paid out, are specified in the policy contracts.",
+        "page_count": 1,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/platinum/wealth-accumulation/aia-platinum-gift-for-life-series"
+        ]
+      },
+      {
+        "category": "read_contract",
+        "text": "You are advised to read the policy contract and product summary before deciding whether to purchase the product.",
+        "page_count": 1,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/platinum/legacy-planning/aia-platinum-indexed-legacy-iii"
+        ]
+      },
+      {
+        "category": "read_contract",
+        "text": "Please refer to the policy contract for the full list of exclusions.",
+        "page_count": 1,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/corporate-international-medical/aia-premier-international-medical"
+        ]
+      }
+    ],
+    "sdic_short": [
+      {
+        "category": "sdic_short",
+        "text": "Protected up to specified limits by SDIC.",
+        "page_count": 2,
+        "families": [
+          "health-wellness",
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/health-wellness/healthy-living-with-aia/discover-a-gateway-to-opulent-travel-experiences",
+          "/en/our-products/corporate-international-medical/aia-premier-international-medical"
+        ]
+      }
+    ],
+    "suitability": [
+      {
+        "category": "suitability",
+        "text": "Buying health insurance products that are not suitable for you may impact your ability to finance your future healthcare needs.",
+        "page_count": 18,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/accident-protection/aia-genfit-pa",
+          "/en/our-products/accident-protection/aia-platinum-accidentcare",
+          "/en/our-products/accident-protection/aia-prime-assured",
+          "/en/our-products/accident-protection/aia-solitaire-personal-accident",
+          "/en/our-products/accident-protection/aia-star-protector-plus"
+        ]
+      },
+      {
+        "category": "suitability",
+        "text": "You should seek advice from an AIA Consultant / Insurance Representative and read the product summary before deciding whether the product is suitable for you.",
+        "page_count": 7,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/accident-protection/aia-genfit-pa",
+          "/en/our-products/health/critical-illness/aia-prime-critical-cover",
+          "/en/our-products/health/medical-insurance/aia-healthshield-gold-max",
+          "/en/our-products/life-insurance/term-insurance/aia-secure-flexi-term",
+          "/en/our-products/life-insurance/whole-life-insurance/aia-guaranteed-protect-plus-iv"
+        ]
+      },
+      {
+        "category": "suitability",
+        "text": "You may wish to terminate the policy according to the free-look provision if you find that the policy is unsuitable after purchasing it, and AIA may recover from you any expense incurred in underwriting the policy.",
+        "page_count": 4,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/accident-protection/aia-platinum-accidentcare",
+          "/en/our-products/accident-protection/aia-solitaire-personal-accident",
+          "/en/our-products/health/disability-income-insurance/aia-pay-protector",
+          "/en/our-products/platinum/accident-health/aia-platinum-accidentcare"
+        ]
+      },
+      {
+        "category": "suitability",
+        "text": "You are recommended to read the product summary and seek advice from an AIA Financial Services Consultant for a financial analysis before purchasing a policy suitable to meet your needs.",
+        "page_count": 3,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/save-and-invest/participating-savings/aia-smart-flexi-growth",
+          "/en/our-products/save-and-invest/participating-savings/aia-smart-flexi-rewards-ii",
+          "/en/our-products/save-and-invest/participating-savings/aia-smart-wealth-builder-series"
+        ]
+      },
+      {
+        "category": "suitability",
+        "text": "Should you choose not to seek advice from an AIA Consultant / Insurance Representative, please consider whether the product is suitable for you, and you take responsibility to ensure that this plan is appropriate to meet your financial needs and insurance objectives.",
+        "page_count": 2,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/accident-protection/aia-solitaire-personal-accident",
+          "/en/our-products/health/disability-income-insurance/aia-pay-protector"
+        ]
+      },
+      {
+        "category": "suitability",
+        "text": "Should you choose not to seek advice from an AIA Financial Services Consultant, please consider whether the product is suitable for you, and you take responsibility to ensure that this plan is appropriate to meet your financial needs and insurance objectives.",
+        "page_count": 2,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/accident-protection/aia-platinum-accidentcare",
+          "/en/our-products/platinum/accident-health/aia-platinum-accidentcare"
+        ]
+      },
+      {
+        "category": "suitability",
+        "text": "You may wish to seek advice from an AIA Financial Services Consultant for a financial analysis before purchasing a policy suitable to meet your needs.",
+        "page_count": 1,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/save-and-invest/participating-savings/aia-retirement-saver-iv"
+        ]
+      },
+      {
+        "category": "suitability",
+        "text": "You should seek advice from a qualified adviser and read the product summary and product highlights sheet(s) before deciding whether the product is suitable for you.",
+        "page_count": 1,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/save-and-invest/investment-linked/aia-invest-easy"
+        ]
+      },
+      {
+        "category": "suitability",
+        "text": "You should seek advice from an AIA Financial Services Consultant or Insurance Representative and read the product summary and product highlights sheet(s) before deciding whether the product is suitable for you.",
+        "page_count": 1,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/save-and-invest/aia-funds-information/featured-funds/aia-shariah-global-diversified-fund"
+        ]
+      },
+      {
+        "category": "suitability",
+        "text": "You should seek advice from an AIA Consultant or Insurance Representative and read the product summary and product highlights sheet(s) before deciding whether the product is suitable for you.",
+        "page_count": 1,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/save-and-invest/aia-funds-information/featured-funds/aia-global-adventurous-income-fund"
+        ]
+      },
+      {
+        "category": "suitability",
+        "text": "You should seek advice from an AIA Consultant or Insurance Representative and read the product summary and product highlights sheet before deciding whether the product is suitable for you.",
+        "page_count": 1,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/save-and-invest/aia-funds-information/featured-funds/aia-adventurous-index-fund"
+        ]
+      },
+      {
+        "category": "suitability",
+        "text": "You may wish to seek advice from a qualified advisor and read the product summary before deciding whether the product is suitable for you.",
+        "page_count": 1,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/platinum/wealth-accumulation/aia-platinum-infinite-wealth-ii"
+        ]
+      },
+      {
+        "category": "suitability",
+        "text": "Extension of validity of vouchers for the early detection screening benefit is strictly not allowed.Customers insured by AIA (\"Insured\") may be excluded from this early detection screening benefit should the participating screening centre deem the Insured to be unsuitable after medical triage.",
+        "page_count": 1,
+        "families": [
+          "health-wellness"
+        ],
+        "example_pages": [
+          "/en/health-wellness/healthcare-services/early-detection-screening"
+        ]
+      }
+    ],
+    "switching": [
+      {
+        "category": "switching",
+        "text": "You should consider carefully before terminating the policy or switching to a new one as there may be disadvantages in doing so.",
+        "page_count": 21,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/health/critical-illness/aia-diabetes-care",
+          "/en/our-products/health/critical-illness/aia-prime-critical-cover",
+          "/en/our-products/health/disability-income-insurance/aia-premier-disability-cover",
+          "/en/our-products/health/medical-insurance/aia-mum2baby-choices",
+          "/en/our-products/life-insurance/term-insurance/aia-mortgage-reducing-term-assurance"
+        ]
+      },
+      {
+        "category": "switching",
+        "text": "The new policy may cost more or have fewer benefits at the same cost.",
+        "page_count": 21,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/health/critical-illness/aia-diabetes-care",
+          "/en/our-products/health/critical-illness/aia-prime-critical-cover",
+          "/en/our-products/health/disability-income-insurance/aia-premier-disability-cover",
+          "/en/our-products/health/medical-insurance/aia-mum2baby-choices",
+          "/en/our-products/life-insurance/term-insurance/aia-mortgage-reducing-term-assurance"
+        ]
+      },
+      {
+        "category": "switching",
+        "text": "You are discouraged from switching from an existing accident and/or health insurance policy to a new one without considering whether the switch is detrimental, as there may be potential disadvantages with switching.",
+        "page_count": 13,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/accident-protection/aia-genfit-pa",
+          "/en/our-products/accident-protection/aia-platinum-accidentcare",
+          "/en/our-products/accident-protection/aia-prime-assured",
+          "/en/our-products/accident-protection/aia-solitaire-personal-accident",
+          "/en/our-products/accident-protection/aia-star-protector-plus"
+        ]
+      },
+      {
+        "category": "switching",
+        "text": "A penalty may be imposed for early policy termination and the new policy may cost more or have fewer benefits at the same cost.",
+        "page_count": 11,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/accident-protection/aia-genfit-pa",
+          "/en/our-products/accident-protection/aia-platinum-accidentcare",
+          "/en/our-products/accident-protection/aia-solitaire-personal-accident",
+          "/en/our-products/accident-protection/aia-star-protector-plus",
+          "/en/our-products/corporate-international-medical/aia-premier-international-medical"
+        ]
+      },
+      {
+        "category": "switching",
+        "text": "For certain ILP Sub-Funds, there will be two business days of non-dealing during which the subscription and/or redemption of units cannot be carried out (including transactions such as fulfilling single premium payments, top-up premium requests, fund switch requests, partial withdrawal/ full surrender/ claim requests or your exercise of the free-look option which necessarily lead to the subscription or redemption of units).",
+        "page_count": 1,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/save-and-invest/investment-linked/aia-invest-easy"
+        ]
+      }
+    ],
+    "underwritten_by": [
+      {
+        "category": "underwritten_by",
+        "text": "This insurance plan is underwritten by AIA Singapore Private Limited (Reg. No. 201106386R) (\"AIA\").",
+        "page_count": 26,
+        "families": [
+          "our-products",
+          "promotions"
+        ],
+        "example_pages": [
+          "/en/our-products/accident-protection/aia-genfit-pa",
+          "/en/our-products/accident-protection/aia-platinum-accidentcare",
+          "/en/our-products/accident-protection/aia-prime-assured",
+          "/en/our-products/accident-protection/aia-solitaire-personal-accident",
+          "/en/our-products/corporate-international-medical/aia-premier-international-medical"
+        ]
+      },
+      {
+        "category": "underwritten_by",
+        "text": "The insurance plans are underwritten by AIA Singapore Private Limited (Reg. No. 201106386R).",
+        "page_count": 15,
+        "families": [
+          "health-wellness"
+        ],
+        "example_pages": [
+          "/en/health-wellness/healthcare-services",
+          "/en/health-wellness/healthcare-services/early-detection-screening",
+          "/en/health-wellness/healthcare-services/home-care",
+          "/en/health-wellness/healthcare-services/home-palliative-care",
+          "/en/health-wellness/healthcare-services/vbc/partners/eagle"
+        ]
+      },
+      {
+        "category": "underwritten_by",
+        "text": "These insurance plans are underwritten by AIA Singapore Private Limited (Reg. No. 201106386R) (\"AIA\").",
+        "page_count": 10,
+        "families": [
+          "aia-retirement-solutions",
+          "our-products",
+          "promotions"
+        ],
+        "example_pages": [
+          "/en/aia-retirement-solutions",
+          "/en/our-products/accident-protection/aia-star-protector-plus",
+          "/en/our-products/health/critical-illness/aia-diabetes-care",
+          "/en/our-products/health/medical-insurance/aia-healthshield-gold-max",
+          "/en/our-products/health/medical-insurance/aia-mum2baby-choices"
+        ]
+      },
+      {
+        "category": "underwritten_by",
+        "text": "This insurance plans is underwritten by AIA Singapore Private Limited (Reg. No. 201106386R) (\"AIA\").",
+        "page_count": 2,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/life-insurance/whole-life-insurance/aia-guaranteed-protect-plus-iv",
+          "/en/our-products/save-and-invest/participating-savings/aia-guaranteed-protect-plus-iv"
+        ]
+      },
+      {
+        "category": "underwritten_by",
+        "text": "This insurance plan is underwritten by AIA Singapore Private Limited (Reg. No. 201106386R (\"AIA\").",
+        "page_count": 2,
+        "families": [
+          "promotions"
+        ],
+        "example_pages": [
+          "/en/promotions/aia-family360",
+          "/en/promotions/aia-protect360"
+        ]
+      },
+      {
+        "category": "underwritten_by",
+        "text": "This insurance plan is underwritten by AIA Singapore Private Limited (Reg. No. 201106386R)(\"AIA\").",
+        "page_count": 1,
+        "families": [
+          "our-products"
+        ],
+        "example_pages": [
+          "/en/our-products/life-insurance/term-insurance/aia-secure-flexi-term"
+        ]
+      }
+    ],
+    "value_added_services": [
+      {
+        "category": "value_added_services",
+        "text": "AIA reserves the right, at its sole and absolute discretion, to cancel, terminate and/or withdraw the value-added services any time or for any reason without notice.",
+        "page_count": 14,
+        "families": [
+          "health-wellness"
+        ],
+        "example_pages": [
+          "/en/health-wellness/healthcare-services",
+          "/en/health-wellness/healthcare-services/home-care",
+          "/en/health-wellness/healthcare-services/home-palliative-care",
+          "/en/health-wellness/healthcare-services/vbc/partners/eagle",
+          "/en/health-wellness/healthcare-services/vbc/partners/gutcare"
+        ]
+      },
+      {
+        "category": "value_added_services",
+        "text": "Value-added services and products provided by our service providers are not contractual benefits provided by AIA Singapore Private Limited (\"AIA\").",
+        "page_count": 1,
+        "families": [
+          "health-wellness"
+        ],
+        "example_pages": [
+          "/en/health-wellness/healthcare-services"
+        ]
+      },
+      {
+        "category": "value_added_services",
+        "text": "AIA shall not be responsible or liable in any way for any act, omission, advice or information that is given, or statements made by any service providers or other persons (including healthcare providers) arising from or in connection with the provision of the medical services, products, any other value-added services provided by service providers or any marketing activities conducted by them.",
+        "page_count": 1,
+        "families": [
+          "health-wellness"
+        ],
+        "example_pages": [
+          "/en/health-wellness/healthcare-services"
+        ]
+      },
+      {
+        "category": "value_added_services",
+        "text": "AIA shall not be responsible or liable in any way for any act, omission, advice or information that is given, or statements made by the participating screening partners or other persons (including healthcare providers) arising from or in connection with the provision of the medical services, products, any other value-added services provided by the participating screening partners or any marketing activities conducted by the participating screening partners.",
+        "page_count": 1,
+        "families": [
+          "health-wellness"
+        ],
+        "example_pages": [
+          "/en/health-wellness/healthcare-services/early-detection-screening"
+        ]
+      },
+      {
+        "category": "value_added_services",
+        "text": "AIA shall not be responsible or liable in any way for any act, omission, advice or information that is given, or statements made by NHCS or other persons (including healthcare providers) arising from or in connection with the provision of the medical services, products, any other value-added services provided by NHCS or any marketing activities conducted by NHCS.",
+        "page_count": 1,
+        "families": [
+          "health-wellness"
+        ],
+        "example_pages": [
+          "/en/health-wellness/healthcare-services/vbc/partners/nhcs"
+        ]
+      },
+      {
+        "category": "value_added_services",
+        "text": "AIA shall not be responsible or liable in any way for any act, omission, advice or information that is given, or statements made by SGH or other persons (including healthcare providers) arising from or in connection with the provision of the medical services, products, any other value-added services provided by SGH or any marketing activities conducted by SGH.",
+        "page_count": 1,
+        "families": [
+          "health-wellness"
+        ],
+        "example_pages": [
+          "/en/health-wellness/healthcare-services/vbc/partners/sgh"
+        ]
+      },
+      {
+        "category": "value_added_services",
+        "text": "AIA shall not be responsible or liable in any way for any act, omission, advice or information that is given, or statements made by Raffles Hospital or other persons (including healthcare providers) arising from or in connection with the provision of the medical services, products, any other value-added services provided by Raffles Hospital or any marketing activities conducted by Raffles Hospital.",
+        "page_count": 1,
+        "families": [
+          "health-wellness"
+        ],
+        "example_pages": [
+          "/en/health-wellness/healthcare-services/vbc/partners/rh"
+        ]
+      },
+      {
+        "category": "value_added_services",
+        "text": "AIA shall not be responsible or liable in any way for any act, omission, advice or information that is given, or statements made by Thomson Medical or other persons (including healthcare providers) arising from or in connection with the provision of the medical services, products, any other value-added services provided by Thomson Medical or any marketing activities conducted by Thomson Medical.",
+        "page_count": 1,
+        "families": [
+          "health-wellness"
+        ],
+        "example_pages": [
+          "/en/health-wellness/healthcare-services/vbc/partners/tmc"
+        ]
+      },
+      {
+        "category": "value_added_services",
+        "text": "AIA shall not be responsible or liable in any way for any act, omission, advice or information that is given, or statements made by Gutcare or other persons (including healthcare providers) arising from or in connection with the provision of the medical services, products, any other value-added services provided by Gutcare or any marketing activities conducted by Gutcare.",
+        "page_count": 1,
+        "families": [
+          "health-wellness"
+        ],
+        "example_pages": [
+          "/en/health-wellness/healthcare-services/vbc/partners/gutcare"
+        ]
+      },
+      {
+        "category": "value_added_services",
+        "text": "AIA shall not be responsible or liable in any way for any act, omission, advice or information that is given, or statements made by Mount Alvernia Hospital or other persons (including healthcare providers) arising from or in connection with the provision of the medical services, products, any other value-added services provided by Mount Alvernia Hospital or any marketing activities conducted by Mount Alvernia Hospital.",
+        "page_count": 1,
+        "families": [
+          "health-wellness"
+        ],
+        "example_pages": [
+          "/en/health-wellness/healthcare-services/vbc/partners/mah"
+        ]
+      },
+      {
+        "category": "value_added_services",
+        "text": "AIA shall not be responsible or liable in any way for any act, omission, advice or information that is given, or statements made by NHG Health or other persons (including healthcare providers) arising from or in connection with the provision of the medical services, products, any other value-added services provided by NHG Health or any marketing activities conducted by NHG Health.",
+        "page_count": 1,
+        "families": [
+          "health-wellness"
+        ],
+        "example_pages": [
+          "/en/health-wellness/healthcare-services/vbc/partners/nhg"
+        ]
+      },
+      {
+        "category": "value_added_services",
+        "text": "AIA shall not be responsible or liable in any way for any act, omission, advice or information that is given, or statements made by NUH or other persons (including healthcare providers) arising from or in connection with the provision of the medical services, products, any other value-added services provided by NUH or any marketing activities conducted by NUH.",
+        "page_count": 1,
+        "families": [
+          "health-wellness"
+        ],
+        "example_pages": [
+          "/en/health-wellness/healthcare-services/vbc/partners/nuh"
+        ]
+      },
+      {
+        "category": "value_added_services",
+        "text": "AIA shall not be responsible or liable in any way for any act, omission, advice or information that is given, or statements made by Solis & Luma or other persons (including healthcare providers) arising from or in connection with the provision of the medical services, products, any other value-added services provided by Solis & Luma or any marketing activities conducted by Solis & Luma.",
+        "page_count": 1,
+        "families": [
+          "health-wellness"
+        ],
+        "example_pages": [
+          "/en/health-wellness/healthcare-services/vbc/partners/solis-luma"
+        ]
+      },
+      {
+        "category": "value_added_services",
+        "text": "AIA shall not be responsible or liable in any way for any act, omission, advice or information that is given, or statements made by EEC or other persons (including healthcare providers) arising from or in connection with the provision of the medical services, products, any other value-added services provided by EEC or any marketing activities conducted by EEC.",
+        "page_count": 1,
+        "families": [
+          "health-wellness"
+        ],
+        "example_pages": [
+          "/en/health-wellness/healthcare-services/vbc/partners/eagle"
+        ]
+      },
+      {
+        "category": "value_added_services",
+        "text": "AIA shall not be responsible or liable in any way for any act, omission, advice or information that is given, or statements made by HMI or other persons (including healthcare providers) arising from or in connection with the provision of the medical services, products, any other value-added services provided by HMI or any marketing activities conducted by HMI.",
+        "page_count": 1,
+        "families": [
+          "health-wellness"
+        ],
+        "example_pages": [
+          "/en/health-wellness/healthcare-services/vbc/partners/hmi"
+        ]
+      },
+      {
+        "category": "value_added_services",
+        "text": "AIA reserves the right, at its sole and absolute discretion, to cancel, terminate and/or withdraw this value-added service any time or for any reason without notice.",
+        "page_count": 1,
+        "families": [
+          "health-wellness"
+        ],
+        "example_pages": [
+          "/en/health-wellness/healthcare-services/home-care"
+        ]
+      },
+      {
+        "category": "value_added_services",
+        "text": "AIA shall not be responsible or liable in any way for any act, omission, advice or information that is given, or statements made by Jaga-Me Pte Ltd or other persons (including healthcare providers) arising from or in connection with the provision of the medical services, products, any other value-added services provided by Jaga-Me Pte Ltd or any marketing activities conducted by Jaga-Me Pte Ltd. The availability of the Home Care service does not mean that the medical bill(s) will be automatically claimable.",
+        "page_count": 1,
+        "families": [
+          "health-wellness"
+        ],
+        "example_pages": [
+          "/en/health-wellness/healthcare-services/home-care"
+        ]
+      },
+      {
+        "category": "value_added_services",
+        "text": "AIA shall not be responsible or liable in any way for any act, omission, advice or information that is given, or statements made by AHPCP or other persons (including healthcare providers) arising from or in connection with the provision of the medical services, products, any other value-added services provided by AHPCP or any marketing activities conducted by AHPCP.",
+        "page_count": 1,
+        "families": [
+          "health-wellness"
+        ],
+        "example_pages": [
+          "/en/health-wellness/healthcare-services/home-palliative-care"
+        ]
+      }
+    ]
+  }
+}

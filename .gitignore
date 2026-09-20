@@ -87,3 +87,16 @@ docs/_build/
 Thumbs.db
 
 api_key.json
+
+# Internal AIA documents (not for redistribution)
+brands.pdf
+
+# AIA brand assets downloaded from aia.com.sg (proprietary)
+brand/aia-singapore/assets/
+brand/aia-singapore/fonts-open/*.ttf
+
+# Raw crawl and imagery from aia.com.sg (proprietary imagery)
+knowledge/aia-sg-web/crawl.json
+knowledge/aia-sg-web/imagery/
+
+output/
