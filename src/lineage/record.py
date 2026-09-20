@@ -28,6 +28,18 @@ def file_digest(path: Path) -> str:
     return hashlib.sha256(Path(path).read_bytes()).hexdigest()[:16]
 
 
+class PageRecord(Strict):
+    """One page of a multi-page variation. A single-page variation has one of these."""
+
+    index: int
+    path: str
+    sha256_16: str
+    width: int
+    height: int
+    purpose: str | None = None
+    html_path: str | None = None
+
+
 class ExportRecord(Strict):
     variation: str
     preset: str
@@ -36,6 +48,11 @@ class ExportRecord(Strict):
     sha256_16: str
     width: int
     height: int
+    #: Additive: one row per variation is preserved, so `len(variations) == len(exports)`
+    #: still holds and `path` still points at page 1.
+    page_count: int = 1
+    pages: list[PageRecord] = Field(default_factory=list)
+    pdf_path: str | None = None
 
 
 class VariationRecord(Strict):
@@ -49,6 +66,10 @@ class VariationRecord(Strict):
     validation: dict
     auto_fixes: list[str] = Field(default_factory=list)
     reviewer_findings: list[dict] = Field(default_factory=list)
+    #: Free-form only: the authored system and pages, so a run can be explained afterwards.
+    design_system: dict | None = None
+    pages: list[PageRecord] = Field(default_factory=list)
+    engine: str = "structured"
 
 
 class LineageRecord(Strict):

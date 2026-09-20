@@ -69,7 +69,9 @@ class DesignSystemSet(Strict):
     complaint that started this work.
     """
 
-    systems: list[DesignSystem] = Field(min_length=3, max_length=4)
+    #: One is allowed: iterating on a single design is a legitimate, much cheaper run. The
+    #: distinctness rules below only bite once there is more than one thing to compare.
+    systems: list[DesignSystem] = Field(min_length=1, max_length=4)
 
     @model_validator(mode="after")
     def _materially_different(self) -> DesignSystemSet:
@@ -87,8 +89,10 @@ class DesignSystemSet(Strict):
             raise ValueError("each variation must use a different archetype: two variations "
                              "built the same way look like the same poster")
 
+        # A spread of three or more that is all one ground is a palette, not a set of ideas.
+        # Below that there is nothing to spread.
         grounds = {s.ground for s in self.systems}
-        if len(grounds) < 2:
+        if len(self.systems) >= 3 and len(grounds) < 2:
             raise ValueError("need at least one bold (red ground) and one light variation")
 
         motifs = {s.primary_motif for s in self.systems}

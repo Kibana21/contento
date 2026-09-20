@@ -14,6 +14,7 @@ from pathlib import Path
 
 from .contracts.common import RunBudget
 from .contracts.design import PRESETS
+from .freeform.pipeline import create_freeform_campaign
 from .revise import revise_campaign
 from .workflow import create_campaign
 
@@ -51,6 +52,27 @@ def _create(args: argparse.Namespace) -> int:
     return 0 if result.ok else 1
 
 
+def _design(args: argparse.Namespace) -> int:
+    """The free-form engine: an LLM authors the page instead of filling a skeleton."""
+    budget = RunBudget(max_tokens=args.max_tokens, max_images=args.max_images)
+    result = asyncio.run(create_freeform_campaign(
+        args.agent, args.campaign, out_root=args.out, variations=args.variations,
+        interactive=not args.non_interactive, visual_review=not args.no_review,
+        use_graph=not args.no_graph, budget=budget, progress=_progress(args.quiet)))
+    print()
+    print(result.summary())
+    if result.lineage:
+        usage = result.lineage.usage_summary
+        pages = sum(e.page_count for e in result.lineage.exports)
+        print(f"\n  tokens {usage['tokens']:,} in {usage['calls']} calls · {pages} page(s)"
+              f" · lineage {result.out_dir / 'campaign.json'}")
+    if result.copy_report.findings:
+        print("\n  copy notes:")
+        for finding in result.copy_report.findings:
+            print(f"    [{finding.severity.value}] {finding.message}")
+    return 0 if result.ok else 1
+
+
 def _revise(args: argparse.Namespace) -> int:
     instruction = args.instruction
     if args.request:
@@ -83,6 +105,23 @@ def build_parser() -> argparse.ArgumentParser:
     create.add_argument("--max-images", type=int, default=6)
     create.add_argument("--quiet", action="store_true")
     create.set_defaults(func=_create)
+
+    design = sub.add_parser(
+        "design", help="free-form engine: the model authors the page (multi-page capable)")
+    design.add_argument("--agent", required=True, help="path to profiles/<agent-id>")
+    design.add_argument("--campaign", required=True, help="path to campaigns/<name> with request.md")
+    design.add_argument("--out", default="output", help="output root (default: output)")
+    design.add_argument("--variations", type=int, default=4, choices=range(1, 5))
+    design.add_argument("--non-interactive", action="store_true",
+                        help="never ask questions; record defaults as assumptions")
+    design.add_argument("--no-review", action="store_true", help="skip the visual reviewer")
+    design.add_argument("--no-graph", action="store_true",
+                        help="run the nodes in sequence instead of through LangGraph")
+    design.add_argument("--max-tokens", type=int, default=250_000,
+                        help="authoring costs several times a template fill (default: 250000)")
+    design.add_argument("--max-images", type=int, default=4)
+    design.add_argument("--quiet", action="store_true")
+    design.set_defaults(func=_design)
 
     revise = sub.add_parser("revise", help="change one variation of a finished campaign")
     revise.add_argument("--campaign", required=True, help="path to output/<name>")

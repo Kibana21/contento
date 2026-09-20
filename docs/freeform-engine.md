@@ -1,6 +1,6 @@
 # The free-form design engine — what it is and how it works
 
-**Status:** in progress. Phase 0 complete, Phase 1 started · 271 tests passing · branch `freeform-engine`
+**Status:** runs end to end · 437 tests passing · branch `freeform-engine`
 **Companion:** `docs/architecture.md` is the master document for the engine that exists today.
 This file explains the *second* engine being built alongside it.
 
@@ -225,16 +225,22 @@ flowchart LR
 
 | Phase | State | Evidence |
 |---|---|---|
-| **0 · Validator seam** | done | `src/validate/spec.py`. `dom.py` has zero `DesignDoc` references left; both engines can share it. The 208 existing tests needed **no edits** |
-| **1 · Recogniser + CSS** | done | `src/freeform/html_parse.py`, `css.py`, and **63 adversarial tests** — one per injection and hiding vector |
-| **1 · Binder + audit** | next | — |
-| **2 · The agents** | planned | — |
-| **3 · Multi-page + PDF** | planned | — |
-| **4 · LangGraph** | planned | Arrives last, behind an optional extra, so tests never depend on it |
+| **0 · Validator seam** | done | `src/validate/spec.py`. `dom.py` has zero `DesignDoc` references left; both engines share it. The 208 existing tests needed **no edits** |
+| **1 · Recogniser + CSS** | done | `html_parse.py`, `css.py`, and **63 adversarial tests** — one per injection and hiding vector |
+| **1 · Binder + audit** | done | `binder.py`, `renderer.py`. A hand-authored page binds, renders, audits and validates with **zero model calls** |
+| **2 · The agents** | done | Content Architect, Narrative Planner, Art Director, Page Composer — all through `ModelGateway` |
+| **3 · Pipeline + lineage** | done | `pipeline.py`, the `design` CLI command, page-level lineage, PDF merge |
+| **4 · LangGraph** | done | `graph.py`, behind an optional `[graph]` extra; `run_sequential` runs the same nodes without it |
+| **5 · Design patterns** | not started | `knowledge/design-patterns/*.yaml` — the biggest remaining lever on quality |
 
-**271 tests pass.** No agent has been built yet — everything so far is the deterministic safety
-layer the agents will run inside. That ordering is deliberate: the binder is the risky, novel
-part, and it is worth proving before any model output depends on it.
+```bash
+python -m src.main design --agent profiles/demo-agent --campaign campaigns/career-seminar \
+    [--variations 4] [--no-graph] [--non-interactive] [--max-tokens 250000]
+```
+
+**437 tests pass, all offline.** The CLI is wired and exercised end to end with scripted
+models; it has **not** yet been run against live Vertex models, so real-model output quality
+is still unmeasured.
 
 ---
 
