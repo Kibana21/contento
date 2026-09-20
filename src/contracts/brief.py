@@ -8,6 +8,7 @@ from enum import StrEnum
 from pydantic import Field, model_validator
 
 from .common import Assumption, Family, Fact, Language, Risk, Strict
+from .content import ContentSet
 
 
 class IntendedUse(StrEnum):
@@ -89,6 +90,9 @@ class CampaignBrief(Strict):
     assumptions: list[Assumption] = Field(default_factory=list)
     missing_fields: list[str] = Field(default_factory=list)
     artifacts: list[ArtifactRecord] = Field(default_factory=list)
+    #: Repeating content quoted from uploads (speakers, benefits). Empty unless an upload
+    #: supplied it; the structured engine has no way to place it and simply ignores it.
+    content: ContentSet = Field(default_factory=ContentSet)
     risk_proposed: Risk = Field(default=Risk.GREEN, description="Agent's view; the policy engine decides")
     product_promotion: bool = False
     variation_count: int = Field(default=4, ge=1, le=6)

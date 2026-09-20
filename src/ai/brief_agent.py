@@ -15,6 +15,7 @@ from __future__ import annotations
 
 import datetime as dt
 import re
+from pathlib import Path
 from collections.abc import Callable
 from dataclasses import dataclass, field
 from typing import Any
@@ -24,13 +25,16 @@ from pydantic_ai import RunContext
 from ..contracts.brief import (ArtifactRecord, CallToAction, CampaignBrief, EventDetails,
                                IntendedUse)
 from ..contracts.common import Assumption, Fact, Risk
+from ..contracts.content import PLURAL, ContentSet
 from ..contracts.profile import AgentProfile
 from ..policy.rules import PolicyDecision, decide, load_rules, resolve_festival
+from .artifact_classifier import extract_text
 from .model_gateway import ModelGateway
+from .module_extractor import ProposedItem, build_items, merge, summarise
 from .schemas import BriefDraft
 
 MAX_QUESTIONS = 2
-MAX_TOOL_CALLS = 10
+MAX_TOOL_CALLS = 12   # +1 round trip for extract_modules
 
 INSTRUCTIONS = """
 You are the Brief Agent for AIA Singapore's Agent Marketing Studio. You turn a
@@ -43,13 +47,15 @@ How to work:
 3. Use `resolve_festival` for any festival, `resolve_date` for dates written in words, and
    `check_url` for any link that will become a QR code or call to action.
 4. Use `campaign_rules` to learn which fields this campaign family requires.
-5. Infer sensible defaults. Record each one in `assumptions` with a short reason. A value you
+5. If an upload lists speakers, benefits or steps, call `extract_modules` once per kind,
+   quoting each field exactly as the document words it. Never write a bio from memory.
+6. Infer sensible defaults. Record each one in `assumptions` with a short reason. A value you
    READ from an upload or from the user is a fact, not an assumption — put it in the typed
    fields (`event`, `cta`) and leave it out of `assumptions`.
-6. Ask the user ONLY when a gap would make the material wrong or misleading — a missing
+7. Ask the user ONLY when a gap would make the material wrong or misleading — a missing
    registration link, an ambiguous date, an unknown venue. Never ask about tone, styling or
    anything you can reasonably infer. At most two questions.
-7. Capture the story layer: the real message, the emotional tone, what the audience feels,
+8. Capture the story layer: the real message, the emotional tone, what the audience feels,
    the representative's angle, and what to avoid.
 
 Rules you must follow:
@@ -77,6 +83,17 @@ class BriefDeps:
     ask: Callable[[str], str] | None = None
     questions_asked: list[dict[str, str]] = field(default_factory=list)
     tool_calls: int = 0
+    #: Repeating content pulled from uploads, verified against the source text.
+    content: ContentSet = field(default_factory=ContentSet)
+    #: artifact id -> extracted text, so verification reads the document, not a summary.
+    source_text: dict[str, str] = field(default_factory=dict)
+
+    def text_of(self, artifact_id: str) -> str:
+        """The upload's extracted text, read once and cached."""
+        if artifact_id not in self.source_text:
+            art = next((a for a in self.artifacts if a.id == artifact_id), None)
+            self.source_text[artifact_id] = extract_text(Path(art.uri)) if art else ""
+        return self.source_text[artifact_id]
 
 
 # --------------------------------------------------------------------------- tools
@@ -175,8 +192,28 @@ def ask_user(ctx: RunContext[BriefDeps], question: str) -> str:
     return answer or "The user did not answer. Use a default and record it as an assumption."
 
 
+def extract_modules(ctx: RunContext[BriefDeps], artifact_id: str, kind: str,
+                    items: list[ProposedItem]) -> dict[str, Any]:
+    """Record repeating content (speakers, benefits, steps) quoted from an upload.
+
+    Use this for a seminar's speakers or a product's benefits. Quote each field EXACTLY as
+    the document words it: every string is checked against the file, and anything you write
+    from memory is rejected. `kind` is one of speaker, benefit, chip, step, stat, quote.
+    """
+    deps = ctx.deps
+    if kind not in PLURAL:
+        return {"error": f"unknown kind {kind!r}", "available": sorted(PLURAL)}
+    source = deps.text_of(artifact_id)
+    if not source.strip():
+        return {"error": f"no readable text in {artifact_id!r}; cannot verify quotations"}
+    start = len(deps.content.group(kind))
+    accepted, rejected = build_items(items, kind, source, artifact_id, start=start)
+    deps.content = merge(deps.content, accepted)
+    return summarise(kind, accepted, rejected)
+
+
 TOOLS = [get_profile, list_photos, read_artifact, resolve_festival_tool, resolve_date,
-         check_url, campaign_rules, ask_user]
+         check_url, campaign_rules, extract_modules, ask_user]
 
 
 # --------------------------------------------------------------------------- assembly
@@ -243,6 +280,7 @@ def assemble_brief(draft: BriefDraft, deps: BriefDeps, campaign_id: str) -> Camp
         assumptions=[Assumption(field=a.field, value=a.value, reason=a.reason) for a in draft.assumptions],
         missing_fields=draft.missing_fields,
         artifacts=deps.artifacts,
+        content=deps.content,
         risk_proposed=draft.risk_proposed,
         product_promotion=draft.product_promotion,
         variation_count=draft.variation_count,
