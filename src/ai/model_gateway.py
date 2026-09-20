@@ -29,7 +29,7 @@ from pydantic_ai.usage import RunUsage, UsageLimits
 
 from ..contracts.common import RunBudget, UsageRecord
 
-Tier = Literal["fast", "quality", "vision", "image"]
+Tier = Literal["fast", "quality", "vision", "image", "authoring"]
 OutputT = TypeVar("OutputT", bound=BaseModel)
 
 DEFAULT_MODELS: dict[Tier, str] = {
@@ -39,13 +39,25 @@ DEFAULT_MODELS: dict[Tier, str] = {
     "image": "gemini-3.1-flash-image",
 }
 
+#: The free-form engine's model map. `authoring` is added here rather than to DEFAULT_MODELS
+#: so the structured engine's lineage — and the test that pins its tier set — is untouched.
+FREEFORM_MODELS: dict[Tier, str] = {**DEFAULT_MODELS, "authoring": "gemini-2.5-pro"}
+
 #: Per-call ceilings. Deliberately tight: agents return structured data, not essays.
 CALL_CAPS: dict[Tier, dict[str, int]] = {
     "fast": {"max_tokens": 2_000, "thinking_budget": 0},
     "quality": {"max_tokens": 4_000, "thinking_budget": 1_024},
     "vision": {"max_tokens": 2_000, "thinking_budget": 0},
     "image": {"max_tokens": 0, "thinking_budget": 0},
+    # A page of authored markup plus a stylesheet does not fit in 4k. Kept as its own tier
+    # rather than raising `quality`, which would lift the cost of every existing call.
+    "authoring": {"max_tokens": 16_000, "thinking_budget": 2_048},
 }
+
+#: Extraction wants determinism; design wants range. Four variations that all look alike is
+#: partly a temperature problem, not only a prompting one.
+TEMPERATURE: dict[Tier, float] = {"fast": 0.4, "quality": 0.4, "vision": 0.3,
+                                  "image": 0.4, "authoring": 0.9}
 
 
 class BudgetExceeded(RuntimeError):
@@ -79,7 +91,8 @@ class ModelGateway:
 
     def settings(self, tier: Tier, **overrides: Any) -> ModelSettings:
         caps = CALL_CAPS[tier]
-        settings: dict[str, Any] = {"max_tokens": caps["max_tokens"], "temperature": 0.4}
+        settings: dict[str, Any] = {"max_tokens": caps["max_tokens"],
+                                    "temperature": TEMPERATURE.get(tier, 0.4)}
         if caps["thinking_budget"] == 0:
             settings["google_thinking_config"] = {"thinking_budget": 0}
         return ModelSettings(**(settings | overrides))

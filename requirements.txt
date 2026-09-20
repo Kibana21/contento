@@ -7,3 +7,7 @@ segno
 pillow
 textstat
 pytest
+pytest-asyncio
+
+# optional: the free-form engine's orchestrator
+langgraph

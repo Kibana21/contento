@@ -106,7 +106,7 @@ class UsageRecord(Strict):
     call_id: str
     node: str = Field(description="Pipeline step, e.g. 'brief_agent'")
     model: str
-    tier: Literal["fast", "quality", "vision", "image"]
+    tier: Literal["fast", "quality", "vision", "image", "authoring"]
     input_tokens: int = 0
     output_tokens: int = 0
     cached_tokens: int = 0

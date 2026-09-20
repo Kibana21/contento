@@ -38,13 +38,25 @@ def seminar_content() -> ContentSet:
     ])
 
 
-def speaker_roster_system() -> DesignSystem:
-    """Reference brochure 2's language: a ring around each portrait, a red pill for the role."""
+def speaker_roster_system(ground: str = "light", variation_id: str = "a",
+                          archetype: str = "speaker-roster") -> DesignSystem:
+    """Reference brochure 2's language: a ring around each portrait, a red pill for the role.
+
+    `ground` changes the colour roles the way a real art director would: on a red ground the
+    headline and the rules go white, and the role pill inverts. `--ink` and `--ground` are
+    set by the binder from the system's ground, so most declarations need no change at all.
+    """
+    bold = ground == "bold"
+    accent = "var(--white)" if bold else "var(--red)"
+    pill_bg = "var(--white)" if bold else "var(--red)"
+    pill_ink = "var(--red)" if bold else "var(--white)"
+    hairline = "var(--red-40)" if bold else "var(--charcoal-20)"
+    quiet = "var(--white)" if bold else "var(--charcoal-80)"
     return DesignSystem(
-        variation_id="a",
+        variation_id=variation_id,
         name="Speaker roster",
-        archetype="speaker-roster",
-        ground="light",
+        archetype=archetype,
+        ground=ground,
         type_pairing="display-led",
         primary_motif="ring",
         image_treatment="cutout",
@@ -59,33 +71,33 @@ def speaker_roster_system() -> DesignSystem:
             CssRule(selector=".logo", declarations={"height": "76px"}),
             CssRule(selector=".headline", declarations={
                 "font-size": "90px", "line-height": "1.02", "letter-spacing": "-0.018em",
-                "text-transform": "uppercase", "color": "var(--red)", "font-weight": "700"}),
+                "text-transform": "uppercase", "color": accent, "font-weight": "700"}),
             CssRule(selector=".subheadline", declarations={
-                "font-size": "30px", "line-height": "1.2", "color": "var(--charcoal)"}),
+                "font-size": "30px", "line-height": "1.2", "color": "var(--ink)"}),
             CssRule(selector=".stack", declarations={
                 "display": "flex", "flex-direction": "column", "gap": "32px"}),
             CssRule(selector=".module", declarations={
                 "display": "grid", "grid-template-columns": "240px 1fr", "gap": "32px",
                 "align-items": "center"}),
             CssRule(selector=".module + .module", declarations={
-                "border-top": "1px solid var(--charcoal-20)", "padding-top": "32px"}),
+                "border-top": f"1px solid {hairline}", "padding-top": "32px"}),
             CssRule(selector=".speaker-ring", declarations={
                 "width": "220px", "height": "220px", "border-radius": "50%",
-                "border": "3px solid var(--red)", "object-fit": "cover",
+                "border": f"3px solid {accent}", "object-fit": "cover",
                 "object-position": "top center"}),
             CssRule(selector=".module-role", declarations={
                 # align-self stops the flex column stretching the pill to full width
                 "display": "inline-block", "align-self": "flex-start",
-                "background": "var(--red)", "color": "var(--white)",
+                "background": pill_bg, "color": pill_ink,
                 "border-radius": "999px", "padding": "6px 20px", "font-size": "22px",
                 "text-transform": "uppercase", "letter-spacing": "0.04em"}),
             CssRule(selector=".module-label", declarations={
-                "font-size": "38px", "font-weight": "700", "color": "var(--charcoal)"}),
+                "font-size": "38px", "font-weight": "700", "color": "var(--ink)"}),
             CssRule(selector=".module-body", declarations={
-                "font-size": "24px", "line-height": "1.45", "color": "var(--charcoal-80)"}),
+                "font-size": "24px", "line-height": "1.45", "color": quiet}),
             CssRule(selector=".detail-row", declarations={
                 "display": "flex", "gap": "16px", "align-items": "center",
-                "font-size": "28px", "color": "var(--charcoal)"}),
+                "font-size": "28px", "color": "var(--ink)"}),
             CssRule(selector=".row", declarations={
                 "display": "flex", "gap": "40px", "align-items": "flex-end",
                 "justify-content": "space-between"}),
@@ -93,7 +105,7 @@ def speaker_roster_system() -> DesignSystem:
             # charcoal-60 on white is 3.49:1 — the exact contrast defect recorded in
             # docs/architecture.md §18. The legal line needs charcoal-80 (6.1:1).
             CssRule(selector=".legal", declarations={
-                "font-size": "15px", "line-height": "1.3", "color": "var(--charcoal-80)",
+                "font-size": "15px", "line-height": "1.3", "color": quiet,
                 "max-width": "620px"}),
         ],
     )
@@ -121,7 +133,8 @@ def seminar_plan(count: int = 5) -> PagePlan:
                     preset="instagram_portrait", must_include=refs)
 
 
-def seminar_page(count: int = 5, *, with_photos: bool = False) -> FreeformPage:
+def seminar_page(count: int = 5, *, with_photos: bool = False,
+                 ground: str = "light") -> FreeformPage:
     """The page grows with the roster — which is the whole point of this engine."""
     modules = "".join(
         _speaker_module(i) if with_photos
@@ -130,9 +143,10 @@ def seminar_page(count: int = 5, *, with_photos: bool = False) -> FreeformPage:
             '<div class="speaker-ring"></div>')
         for i in range(count)
     )
+    logo = "white" if ground == "bold" else "red"
     html = f"""
     <div class="page">
-      <div class="band"><img class="logo" data-asset="brand.logo.red"></div>
+      <div class="band"><img class="logo" data-asset="brand.logo.{logo}"></div>
       <div class="stack">
         <h1 class="headline" data-ref="copy.headline"></h1>
         <p class="subheadline" data-ref="copy.subheadline"></p>

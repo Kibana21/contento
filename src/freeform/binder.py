@@ -86,7 +86,10 @@ def bind_page(page: FreeformPage, system: DesignSystem, ctx: RenderContext, *,
     # ---- 3. the page carries what the storyboard promised -----------------
     refs = [n.ref for n in root.walk() if n.ref] + [n.asset for n in root.walk() if n.asset]
     for required in page.plan.must_include:
-        count = refs.count(required)
+        # the plan asks for "the logo"; red-on-light and white-on-red are both correct
+        # answers, and the rule below decides which
+        count = (sum(r.startswith("brand.logo") for r in refs)
+                 if required.startswith("brand.logo") else refs.count(required))
         if count == 0:
             _fail(findings, "content.missing_required",
                   f"the plan requires {required!r} on this page, but it is absent")
@@ -96,6 +99,16 @@ def bind_page(page: FreeformPage, system: DesignSystem, ctx: RenderContext, *,
     for ref in refs:
         if refs.count(ref) > 1 and ref not in page.plan.must_include:
             _fail(findings, "content.duplicate_ref", f"{ref!r} appears more than once")
+
+    # ---- 3b. the logo takes its colour from the ground (Brand Standards p39) ----
+    for ref in refs:
+        if ref.startswith("brand.logo"):
+            wanted = "white" if system.ground == "bold" else "red"
+            if ref.rsplit(".", 1)[-1] != wanted:
+                _fail(findings, "logo.colour",
+                      f"{ref} on a {system.ground} ground; the logo is "
+                      f"{wanted} on this background",
+                      fix=f"use brand.logo.{wanted}")
 
     # ---- 4/5/6. resolve, inject and tag ------------------------------------
     types: dict[str, ElementType] = {}
