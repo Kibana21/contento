@@ -13,8 +13,9 @@ from typing import Any
 
 from ..contracts.brand import BrandPack
 from ..contracts.brief import CampaignBrief
+from ..contracts.content import ContentSet
 from ..contracts.copy import Copy
-from ..contracts.design import DesignDoc, Element, ElementType
+from ..contracts.design import Canvas, DesignDoc, Element, ElementType
 from ..contracts.profile import AgentProfile
 from ..policy.rules import PolicyDecision
 from .mountains import mountains_svg
@@ -35,17 +36,32 @@ def _fmt(value: Any) -> str:
 
 @dataclass
 class RenderContext:
-    design: DesignDoc
     brief: CampaignBrief
     copy: Copy
     profile: AgentProfile
     brand: BrandPack
+    #: The structured engine's design. `None` on the free-form path, where the authored
+    #: markup takes its place; only `element_payload` and the mountains sizing need it.
+    design: DesignDoc | None = None
     decision: PolicyDecision | None = None
     assets_root: Path = field(default_factory=Path.cwd)
+    #: Structured repeating content. Empty on the structured path, which has no use for it.
+    content: "ContentSet | None" = None
+
+    @property
+    def canvas(self) -> "Canvas":
+        if self.design is None:
+            raise UnresolvedReference("this context has no design; pass the canvas explicitly")
+        return self.design.canvas
 
     # ---- data resolution --------------------------------------------------
     def facts(self) -> dict[str, Any]:
-        """Every printable fact, profile first so verified contact data always wins."""
+        """Every printable fact.
+
+        Brief facts win over profile contact details on a key collision: `assemble_brief`
+        seeds the brief from `profile.contact_facts()` in the first place, so a differing
+        value there is a deliberate campaign-level override, not model drift.
+        """
         data: dict[str, Any] = dict(self.profile.contact_facts())
         data |= {f.field if f.field.startswith(("event.", "cta.", "agent.")) else f.field: f.value
                  for f in self.brief.facts}
@@ -79,9 +95,25 @@ class RenderContext:
             if not text:
                 raise UnresolvedReference("no disclaimer required, but the design asks for one")
             return text
+        if namespace == "content":
+            if self.content is None:
+                raise UnresolvedReference(f"{ref!r}: this campaign has no structured content")
+            try:
+                value = self.content.resolve(key)
+            except KeyError as exc:
+                raise UnresolvedReference(str(exc)) from exc
+            if value is None:
+                raise UnresolvedReference(f"{ref!r} is empty on that content item")
+            return _fmt(value)
         if namespace == "profile":
             facts = self.profile.contact_facts()
-            return _fmt(facts.get(f"agent.{key}", ""))
+            name = f"agent.{key}"
+            if name not in facts:
+                # A blank here would print nothing and pass every check. Fail loudly, as the
+                # other namespaces do — the free-form binder has no other backstop.
+                raise UnresolvedReference(
+                    f"profile has no {key!r}; available: {sorted(k.split('.', 1)[1] for k in facts)}")
+            return _fmt(facts[name])
         raise UnresolvedReference(f"unknown reference namespace in {ref!r}")
 
     # ---- element rendering payloads --------------------------------------

@@ -10,18 +10,23 @@ from ..contracts.common import ValidationReport
 from ..contracts.design import DesignDoc
 from .design import validate_design
 from .dom import validate_dom
-from ..contracts.design import ElementType
 from .pixel import photo_rects, validate_pixels
+from .spec import ElementSpec
 
-__all__ = ["validate_design", "validate_dom", "validate_pixels", "validate_all"]
+__all__ = ["validate_design", "validate_dom", "validate_pixels", "validate_all",
+           "validate_rendered", "ElementSpec"]
+
+
+def validate_rendered(spec: ElementSpec, geometry: dict[str, Any], image_path: Path,
+                      brand: BrandPack) -> ValidationReport:
+    """The layers that read the rendered page. Shared by both engines."""
+    return validate_dom(spec, geometry, brand).merge(
+        validate_pixels(image_path, theme=spec.theme,
+                        exclude=photo_rects(geometry, spec.masked_ids)))
 
 
 def validate_all(design: DesignDoc, geometry: dict[str, Any], image_path: Path,
                  brand: BrandPack) -> ValidationReport:
-    theme = design.theme.value if hasattr(design.theme, "value") else str(design.theme)
-    photo_ids = {e.id for e in design.elements
-                 if e.type in {ElementType.AGENT_PHOTO, ElementType.IMAGE, ElementType.QR}}
-    return (validate_design(design, brand)
-            .merge(validate_dom(design, geometry, brand))
-            .merge(validate_pixels(image_path, theme=theme,
-                                   exclude=photo_rects(geometry, photo_ids))))
+    """Structured-engine entry point: the DesignDoc checks plus the rendered-page checks."""
+    return validate_design(design, brand).merge(
+        validate_rendered(ElementSpec.from_design(design), geometry, image_path, brand))

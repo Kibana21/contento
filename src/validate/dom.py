@@ -1,4 +1,8 @@
-"""Checks against the *rendered* page: exact geometry, computed colours, real font sizes."""
+"""Checks against the *rendered* page: exact geometry, computed colours, real font sizes.
+
+Keyed on element ids via `ElementSpec`, not on the DesignDoc, so a design built from a layout
+skeleton and one authored as free-form HTML are checked by the same rules.
+"""
 
 from __future__ import annotations
 
@@ -8,16 +12,20 @@ from ..contracts.brand import BrandPack
 from ..contracts.common import Finding, Severity, ValidationReport
 from ..contracts.design import DesignDoc, ElementType
 from .colour import contrast_ratio, parse_colour
+from .spec import ElementSpec
 
 LARGE_TEXT_PX = 32  # WCAG "large text" threshold at 1x scale (24pt)
 
 
-def validate_dom(design: DesignDoc, geometry: dict[str, Any], brand: BrandPack) -> ValidationReport:
+def validate_dom(source: ElementSpec | DesignDoc, geometry: dict[str, Any],
+                 brand: BrandPack) -> ValidationReport:
+    spec = ElementSpec.coerce(source)
     findings: list[Finding] = []
     checks = 0
     by_id = {e["id"]: e for e in geometry["elements"]}
     canvas = geometry["canvas"]
-    scale = design.canvas.short_edge / 1080
+    scale = spec.scale
+    text_ids = spec.text_ids
     page_bg = parse_colour(geometry.get("background", "")) or (255, 255, 255)
 
     def fail(rule: str, msg: str, *, element: str | None = None, sev: Severity = Severity.ERROR,
@@ -26,16 +34,18 @@ def validate_dom(design: DesignDoc, geometry: dict[str, Any], brand: BrandPack) 
                                 evidence=evidence, suggestion=fix))
 
     # ---- everything the design declared actually rendered -----------------
-    for el in design.elements:
-        if not el.visible:
+    # Only meaningful where something was declared up front. Free-form markup declares
+    # nothing separately: the authored HTML is the declaration.
+    for element_id, visible in spec.declared.items():
+        if not visible:
             continue
         checks += 1
-        node = by_id.get(el.id)
+        node = by_id.get(element_id)
         if node is None:
-            fail("render.missing", f"Element {el.id!r} did not render", element=el.id)
+            fail("render.missing", f"Element {element_id!r} did not render", element=element_id)
             continue
         if node["width"] < 1 or node["height"] < 1:
-            fail("render.zero_size", f"Element {el.id!r} rendered with no size", element=el.id)
+            fail("render.zero_size", f"Element {element_id!r} rendered with no size", element=element_id)
 
     # ---- overflow and safe margins ---------------------------------------
     margin = float(brand.spacing.get("poster", {}).get("outer_margin", 64)) * scale
@@ -49,8 +59,7 @@ def validate_dom(design: DesignDoc, geometry: dict[str, Any], brand: BrandPack) 
         checks += 1
         if node["outsideCanvas"]:
             fail("layout.outside_canvas", f"Element {node['id']!r} falls outside the canvas", element=node["id"])
-        if node["id"] in {e.id for e in design.elements if e.type in
-                          {ElementType.HEADLINE, ElementType.SUBHEADLINE, ElementType.BODY, ElementType.FACT}}:
+        if node["id"] in spec.flow_text_ids:
             checks += 1
             if node["x"] < margin - 1 or node["y"] < margin - 1 or \
                node["x"] + node["width"] > canvas["width"] - margin + 1:
@@ -59,9 +68,6 @@ def validate_dom(design: DesignDoc, geometry: dict[str, Any], brand: BrandPack) 
 
     # ---- minimum type size (Brand Standards p76) --------------------------
     min_px = float(brand.hierarchy()["min_body_size"]["digital_px"]) * scale
-    text_types = {ElementType.HEADLINE, ElementType.SUBHEADLINE, ElementType.BODY,
-                  ElementType.FACT, ElementType.CTA, ElementType.CONTACT_BLOCK, ElementType.DISCLAIMER}
-    text_ids = {e.id for e in design.elements if e.type in text_types}
     for node in geometry["elements"]:
         if node["id"] not in text_ids or not node["text"]:
             continue
@@ -71,9 +77,9 @@ def validate_dom(design: DesignDoc, geometry: dict[str, Any], brand: BrandPack) 
                  element=node["id"])
 
     # ---- hierarchy ratios (subhead = headline/3, body = subhead/2) --------
-    h = by_id.get(_first(design, ElementType.HEADLINE))
-    s = by_id.get(_first(design, ElementType.SUBHEADLINE))
-    b = by_id.get(_first(design, ElementType.BODY))
+    h = by_id.get(spec.first.get(ElementType.HEADLINE, ""))
+    s = by_id.get(spec.first.get(ElementType.SUBHEADLINE, ""))
+    b = by_id.get(spec.first.get(ElementType.BODY, ""))
     ratios = brand.hierarchy()
     if h and s:
         checks += 1
@@ -110,6 +116,12 @@ def validate_dom(design: DesignDoc, geometry: dict[str, Any], brand: BrandPack) 
             continue
         if bg is None or (len(node["backgroundColor"].split(",")) > 3 and node["backgroundColor"].endswith("0)")):
             bg = page_bg
+        # Opacity is a paint-time composite, so computed `color` still reads as fully opaque.
+        # Without this, text faded to 20% passes the contrast rule while being illegible —
+        # which is exactly how a design would make a mandatory legal line disappear.
+        alpha = _opacity(node)
+        if alpha < 1.0:
+            fg = tuple(b + (f - b) * alpha for f, b in zip(fg, bg))
         checks += 1
         ratio = contrast_ratio(fg, bg)
         threshold = 3.0 if node["fontSize"] >= LARGE_TEXT_PX * scale else brand.min_text_contrast
@@ -119,8 +131,7 @@ def validate_dom(design: DesignDoc, geometry: dict[str, Any], brand: BrandPack) 
                  fix="use white text on red, or charcoal on light grounds")
 
     # ---- text must not collide with imagery -------------------------------
-    obstacle_ids = {e.id for e in design.elements
-                    if e.type in {ElementType.AGENT_PHOTO, ElementType.IMAGE}}
+    obstacle_ids = spec.obstacle_ids
     obstacles = [n for n in geometry["elements"] if n["id"] in obstacle_ids]
     for node in geometry["elements"]:
         if node["id"] not in text_ids or not node["text"] or node["id"] in obstacle_ids:
@@ -151,7 +162,7 @@ def validate_dom(design: DesignDoc, geometry: dict[str, Any], brand: BrandPack) 
                 break
 
     # ---- logo minimum size and clear space (p34) --------------------------
-    logo_ids = [e.id for e in design.elements if e.type == ElementType.LOGO]
+    logo_ids = spec.logo_ids
     for lid in logo_ids:
         node = by_id.get(lid)
         if not node:
@@ -173,9 +184,18 @@ def validate_dom(design: DesignDoc, geometry: dict[str, Any], brand: BrandPack) 
     return ValidationReport(checks_run=checks, findings=findings)
 
 
-def _first(design: DesignDoc, etype: ElementType) -> str:
-    els = design.by_type(etype)
-    return els[0].id if els else ""
+def _opacity(node: dict[str, Any]) -> float:
+    """How opaque this text really is, including opacity inherited from its ancestors.
+
+    `effectiveOpacity` is reported by the free-form renderer, which walks the tree; the
+    structured renderer reports only the element's own `opacity`. Either is better than
+    assuming full opacity.
+    """
+    raw = node.get("effectiveOpacity", node.get("opacity", 1.0))
+    try:
+        return max(0.0, min(1.0, float(raw)))
+    except (TypeError, ValueError):
+        return 1.0
 
 
 def _overlap_area(a: dict[str, Any], b: dict[str, Any]) -> float:
